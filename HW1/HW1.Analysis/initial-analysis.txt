@@ -1,15 +1,10 @@
 Puzzle
 ---------------------
-configuration : Configuration [1]
-selected : Syllable [0..2]
-previousMoves : Puzzle [*] ??? (array of previous puzzle states, which can reset?)
-
-
-Configuration (hard coded configurations)
----------------
 syllables : Syllable [*]
-numRows : int
-numColumns : int
+selected : Syllable [0..2]
+numRows : number
+numColumns : number
+//previousMoves : Puzzle [*] ??? (array of previous puzzle states, which can reset?)
 
 
 
@@ -22,9 +17,9 @@ column : int
 Syllable
 -----------
 coordinate : Coordinate [1]	 //0 and higher
-syllable : string
-parentWord : string
-syllableNumber : int //1 and higher
+//syllable : string
+//parentWord : string
+//syllableNumber : int //1 and higher
 validLocation : boolean (checks if first syllable and correct column to see if it goes green)
 
 

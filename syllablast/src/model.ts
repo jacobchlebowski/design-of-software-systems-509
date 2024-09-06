@@ -28,18 +28,18 @@ export class Syllable {
 }
 
 
-//Configuration 1
-export class Configuration1{
-    syllables : Syllable[];
-    numRows : number;
-    numColumns = number;
+// //Configuration 1??
+// export class Configuration{
+//     syllables : Syllable[];
+//     numRows : number;
+//     numColumns : number;
 
-    constructor(syllables:Syllable[], numRows:number, numColumns:number){
-        this.syllables = Syllable[];
-        this.numRows = numRows;
-        this.numColumns = numColumns;
-    }
-}
+//     constructor(syllables:Syllable[], numRows:number, numColumns:number){
+//         this.syllables = Syllable[];
+//         this.numRows = numRows;
+//         this.numColumns = numColumns;
+//     }
+// }
 
 
 // //Configuration 2
@@ -71,12 +71,41 @@ export class Configuration1{
 
 //Puzzle
 export class Puzzle{
-    configuration : Configuration1;
+    syllables : Syllable[];
     selected : Syllable[];
+    numRows : number;
+    numColumns : number;
     //previousMoves : Puzzle [*]??????
 
-    constructor(configuration:Configuration1, selected:Syllable){
-        this.configuration = Configuration1;
-        this.selected = Syllable[];
+    constructor(syllables:Syllable, selected:Syllable, numRows:number, numColumns:number){
+        this.syllables = Syllable;
+        this.selected = Syllable;
+        this.numRows = numRows;
+        this.numColumns = numColumns;
     }
+}
+
+
+//Model
+export class Model{
+    puzzle : Puzzle;
+    numMoves : number;
+    scoreCounter : number;
+    victory : boolean;
+
+    //configuration is going to be JSON-encoded puzzle
+    constructor(configuration){
+        this.initialize(configuration);
+    }
+
+    initialize(configuration){
+        // let syllables = parseInt(configuration.board.syllables);
+        // let selected = parseInt(configuration.selected.)
+        let numRows = parseInt(configuration.board.numRows);
+        let numColumns = parseInt(configuration.board.numColumns);
+        //let previousMoves = 
+     
+       // this.puzzle = new Puzzle(numRows,numColumns);
+    }
+
 }
