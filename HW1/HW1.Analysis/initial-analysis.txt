@@ -1,32 +1,28 @@
-Puzzle
----------------------
-syllables : Syllable [*]
-selected : Syllable [0..2]
-numRows : number
-numColumns : number
-//previousMoves : Puzzle [*] ??? (array of previous puzzle states, which can reset?)
-
-
-
 Coordinate
 -----------
-row : int
-column : int
+row : number		//0 and higher
+column : number		//0 and higher
 
 
 Syllable
 -----------
-coordinate : Coordinate [1]	 //0 and higher
-//syllable : string
-//parentWord : string
-//syllableNumber : int //1 and higher
-validLocation : boolean (checks if first syllable and correct column to see if it goes green)
+location : Coordinate [1]
+syllable : string
 
+
+Puzzle
+---------------------
+numRows : number
+numColumns : number
+syllables : Syllable [*]
+selected : Syllable [0..2]
+previousMoves : Syllable [*]
+parentWords : string [*][*]	//Office hours? [["un","der","wa","ter"],["anotherword"],...]
 
 
 Model
 -----
 puzzle : Puzzle
-numMoves : int
-scoreCounter : int
+numSwaps : number
+scoreCounter : number
 victory : boolean

@@ -1,4 +1,7 @@
 //Configuration for pre-existing puzzles
+
+/*=========================================================================*/
+/*CONFIGURATION 1*/
 const configuration1 =
 {
     "name" : "Configuration 1",
@@ -8,11 +11,21 @@ const configuration1 =
     },
     "syllables": [
         {
-            "label" : "ter",
-            //"row" : "0",
-            //"column" : "0",
-            //"coordinate" : {"row" : "0", "column" : "0"},
-            //"validLocation" : "false"
+            "label" : "ter", 
+            "location" : {"row" : "0", "column" : "0"}
         }
+    ],
+    "parentWords:" : [
+        "example"
     ]
 }
+
+
+
+/*=========================================================================*/
+/*CONFIGURATION 2*/
+
+
+
+/*=========================================================================*/
+/*CONFIGURATION 3*/

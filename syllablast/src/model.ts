@@ -1,8 +1,7 @@
 //Coordinate
 export class Coordinate {
-    readonly row : number;
-    readonly column : number;
-
+    public row : number;
+    public column : number;
 
     constructor(row:number, column:number){
         this.row = row;
@@ -12,79 +11,33 @@ export class Coordinate {
 
 //Syllable
 export class Syllable {
-    readonly coordinate : Coordinate;
+    readonly location : Coordinate;
     readonly syllable : string;
-    readonly parentWord : string;
-    readonly syllableNumber : number;
-    readonly validLocation : boolean;
 
-    constructor(coordinate:Coordinate, syllable:string, parentWord:string, syllableNumber:number, validLocation:boolean){
-        this.coordinate = coordinate;
+    constructor(location:Coordinate,syllable:string){
+        this.location = location;
         this.syllable = syllable;
-        this.parentWord = parentWord;
-        this.syllableNumber = syllableNumber;
-        this.validLocation = validLocation;
     }
 }
-
-
-// //Configuration 1??
-// export class Configuration{
-//     syllables : Syllable[];
-//     numRows : number;
-//     numColumns : number;
-
-//     constructor(syllables:Syllable[], numRows:number, numColumns:number){
-//         this.syllables = Syllable[];
-//         this.numRows = numRows;
-//         this.numColumns = numColumns;
-//     }
-// }
-
-
-// //Configuration 2
-// export class Configuration2{
-//     syllables : Syllable[];
-//     numRows : number;
-//     numColumns = number;
-
-//     constructor(syllables:Syllable[], numRows:number, numColumns:number){
-//         this.syllables = Syllable[];
-//         this.numRows = numRows;
-//         this.numColumns = numColumns;
-//     }
-// }
-
-// //Configuration 3
-// export class Configuration3{
-//     syllables : Syllable[];
-//     numRows : number;
-//     numColumns = number;
-
-//     constructor(syllables:Syllable[], numRows:number, numColumns:number){
-//         this.syllables = Syllable[];
-//         this.numRows = numRows;
-//         this.numColumns = numColumns;
-//     }
-// }
-
 
 //Puzzle
 export class Puzzle{
-    syllables : Syllable[];
-    selected : Syllable[];
-    numRows : number;
-    numColumns : number;
-    //previousMoves : Puzzle [*]??????
+    readonly numRows : number;
+    readonly numColumns : number;
+    readonly syllables : Syllable[];
+    readonly selected : [Syllable,Syllable];
+    readonly previousMoves : Syllable[];
+    readonly parentWords : string[][];
 
-    constructor(syllables:Syllable, selected:Syllable, numRows:number, numColumns:number){
-        this.syllables = Syllable;
-        this.selected = Syllable;
+    constructor(numRows:number, numColumns:number, syllables:Syllable[], selected:[Syllable,Syllable], previousMoves:Syllable[], parentWords:string[][]){
         this.numRows = numRows;
         this.numColumns = numColumns;
+        this.syllables = syllables;
+        this.selected = selected;
+        this.previousMoves = previousMoves;
+        this.parentWords = parentWords;
     }
 }
-
 
 //Model
 export class Model{
@@ -99,13 +52,19 @@ export class Model{
     }
 
     initialize(configuration){
-        // let syllables = parseInt(configuration.board.syllables);
-        // let selected = parseInt(configuration.selected.)
-        let numRows = parseInt(configuration.board.numRows);
-        let numColumns = parseInt(configuration.board.numColumns);
-        //let previousMoves = 
-     
-       // this.puzzle = new Puzzle(numRows,numColumns);
+        //initialize the following:
+        let numRows = parseInt(configuration.board.rows);
+        let numColumns = parseInt(configuration.board.columns);
+        let syllables = configuration.syllables;
+        let selected = [Syllable,Syllable];
+        let previousMoves = [];
+        let parentWords = configuration.parentWords;
+
+        this.puzzle = new Puzzle(numRows, numColumns, syllables, selected, previousMoves, parentWords);
+        this.numMoves = 0;
+        this.scoreCounter = 0;
+        this.victory = false;
+
     }
 
 }
