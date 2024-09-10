@@ -29,6 +29,10 @@ export class Syllable {
         s.place(this.location)
         return s;
     }
+
+    getSyllable(){
+        return this.syllable;
+    }
 }
 
 //Puzzle

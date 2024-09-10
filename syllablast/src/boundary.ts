@@ -28,10 +28,17 @@ export class Rectangle {
 
 export function drawPuzzle (ctx:any, puzzle:Puzzle) {
     ctx.shadowColor = 'white'
-    ctx.fillStyle = 'lightblue';
+    let selected = puzzle.selected
 
     puzzle.syllables?.forEach(syllable => {
          let rect = computeRectangle(syllable);
+         if (selected[0] !== undefined && selected[1] !== undefined){       //if AT LEAST ONE THING IS SELECTED
+            for(let p of selected){ //FOR EVERY ITEM THATS SELECTED
+                    ctx.fillStyle = 'yellow' //change its color to yellow
+                }
+            } else{
+            ctx.fillStyle = 'lightblue';    //NOTHING IS SELECTED
+         }
          ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
     })
 }
