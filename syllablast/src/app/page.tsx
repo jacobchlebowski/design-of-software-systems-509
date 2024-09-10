@@ -10,12 +10,15 @@ var actualPuzzle = configuration1;
 export default function Home() {
   //initial instantiation of the Model comes from the actualPuzzle
   const [model, setModel] = React.useState(new Model(actualPuzzle))
+  const [redraw, setRedraw] = React.useState(0)
 
   const canvasRef = React.useRef(null) //Later need to be able to refer to App
 
+  //Set up the refresh policies
   React.useEffect(() => {
     redrawCanvas(model, canvasRef.current);
-  }, [model])
+  }, [model, redraw])
+  
 
   //RENDER
   return (

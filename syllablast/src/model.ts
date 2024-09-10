@@ -18,25 +18,43 @@ export class Syllable {
         this.location = location;
         this.syllable = syllable;
     }
+
+    place(location:Coordinate){
+        let aLocation = new Coordinate(this.location.row, this.location.column);
+        aLocation = location;
+    }
+
+    copy() : Syllable {
+        let s = new Syllable(this.location, this.syllable);
+        s.place(this.location)
+        return s;
+    }
 }
 
 //Puzzle
 export class Puzzle{
     readonly numRows : number;
     readonly numColumns : number;
-    readonly syllables : Syllable[];
-    readonly selected : [Syllable,Syllable];
+    readonly allSyllables : Syllable[];
+    readonly selected : Syllable[];
     readonly previousMoves : Syllable[];
-    readonly parentWords : string[][];
+    readonly allParentWords : string[][];
+             syllables : Array<Syllable> | undefined;
 
-    constructor(numRows:number, numColumns:number, syllables:Syllable[], selected:[Syllable,Syllable], previousMoves:Syllable[], parentWords:string[][]){
+    constructor(numRows:number, numColumns:number, allSyllables:Syllable[], selected:Syllable[], previousMoves:Syllable[], allParentWords:string[][]){
         this.numRows = numRows;
         this.numColumns = numColumns;
-        this.syllables = syllables;
+        this.allSyllables = allSyllables;
         this.selected = selected;
         this.previousMoves = previousMoves;
-        this.parentWords = parentWords;
+        this.allParentWords = allParentWords;
     }
+
+    initialize(syllables:Array<Syllable>){
+        //make sure to create NEW Syllable objects
+        this.syllables = syllables.map(s => s.copy());
+    }
+
 }
 
 //Model
@@ -55,17 +73,37 @@ export class Model{
         //initialize the following:
         let numRows = parseInt(info.board.rows);
         let numColumns = parseInt(info.board.columns);
-        let syllables = info.syllables;
-        let selected = [Syllable,Syllable];
+
+        //Selected Array of Size 2
+        var selected:Array<Syllable> = new Array<Syllable>(2);
         let previousMoves = [];
-        let parentWords = info.parentWords;
 
+        //Grab all parent words
+        var allParentWords:Array<Array<string>> = [];
+        for (let i of info.parentWords){
+            let word = [i.firstSyll,i.secondSyll,i.thirdSyll,i.fourthSyll];
+            allParentWords.push(word);
+        }
 
-        this.puzzle = new Puzzle(numRows, numColumns, syllables, selected, previousMoves, parentWords);
+        //Grab all syllables
+        var allSyllables:Array<Syllable> = [];
+        for (let s of info.syllables){
+            let coordinate = new Coordinate(parseInt(s.location.row),parseInt(s.location.column))
+            let syllable = new Syllable(coordinate,s.label);
+            allSyllables.push(syllable);
+        }
+
+        // Place Syllables on board
+        for (let p of allSyllables){
+            p.place(p.location);
+        }
+
+        //create puzzle to be initialized
+        this.puzzle = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+        this.puzzle.initialize(allSyllables);
         this.numMoves = 0;
         this.scoreCounter = 0;
         this.victory = false;
-
     }
 
 }
