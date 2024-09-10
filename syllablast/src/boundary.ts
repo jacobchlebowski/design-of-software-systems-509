@@ -3,7 +3,7 @@ import { Model, Puzzle, Syllable } from './model'
 
 //Scaling constants for canvas
 var BOXSIZE:number = 124;
-var OFFSET:number = 3;
+var OFFSET:number = 5;
 
 export function computeRectangle(syllable:Syllable){
     let c = syllable.location
@@ -39,6 +39,9 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
             } else{
             ctx.fillStyle = 'lightblue';    //NOTHING IS SELECTED
          }
+
+         //draw the rectangle (each syllable)
+         ctx.shadowBlur = 0;
          ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
     })
 }
