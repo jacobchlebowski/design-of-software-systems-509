@@ -16,7 +16,7 @@ const configuration1 =
         }
     ],
     "parentWords:" : [
-        "example"
+       ["un","der","wa","ter"],["anotherWord"]
     ]
 }
 
@@ -29,3 +29,8 @@ const configuration1 =
 
 /*=========================================================================*/
 /*CONFIGURATION 3*/
+
+
+/*=========================================================================*/
+/*EXPORT*/
+export { configuration1 }

@@ -17,7 +17,7 @@ numColumns : number
 syllables : Syllable [*]
 selected : Syllable [0..2]
 previousMoves : Syllable [*]
-parentWords : string [*][*]	//Office hours? [["un","der","wa","ter"],["anotherword"],...]
+parentWords : string [*][*]	[["un","der","wa","ter"],["anotherword"],...]
 
 
 Model

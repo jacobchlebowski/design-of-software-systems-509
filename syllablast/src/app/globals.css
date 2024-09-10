@@ -25,3 +25,84 @@ body {
     text-wrap: balance;
   }
 }
+
+.button{
+  font: bold 25px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+.puzzle {
+  position:absolute;
+  left:10px;
+  top: 10px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-color: white;
+  border-left-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+}
+
+.nummoves {
+  position: absolute;
+  left: 550px;
+  top: 35px;
+}
+
+.score {
+  position: absolute;
+  left: 550px;
+  top: 65px;
+}
+
+
+.buttons {
+  position: absolute;
+  left: 550px;
+  top: 150px;
+}
+
+.swapbutton {
+  position: absolute;
+  left: 0;
+  top: 120px;
+}
+
+.resetbutton {
+  position: absolute;
+  left: 0px;
+  top: 300px;
+}
+
+.undobutton {
+  position: absolute;
+  left: 0px;
+  top: 220px;
+}
+
+.configuration1button {
+  position: absolute;
+  left: 250px;
+  top: 150px;
+}
+
+.configuration2button {
+  position: absolute;
+  left: 250px;
+  top: 200px;
+}
+
+.configuration3button {
+  position: absolute;
+  left: 250px;
+  top: 250px;
+}

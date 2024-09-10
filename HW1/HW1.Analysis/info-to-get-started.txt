@@ -1,0 +1,453 @@
+1. npx create-next-app@latest
+
+This will create 290MB directory in which the application is to be run
+
+'cd' into the directory that is created.
+
+1a. Create model.ts file
+
+[model.ts]
+export class MoveType {
+    readonly deltar : number;
+    readonly deltac : number;
+
+    constructor(dr:number, dc:number) {
+        this.deltar = dr;
+        this.deltac = dc;
+    }
+
+    static parse(s:string) : MoveType {
+        if ((s === "down")  || (s === "Down"))   { return Down; }
+        if ((s === "up")    || (s === "Up"))     { return Up; }
+        if ((s === "left")  || (s === "Left"))   { return Left; }
+        if ((s === "right") || (s === "Right"))  { return Right; }
+        
+        return NoMove;
+      }
+}
+
+export const Down = new MoveType(1, 0, "down");
+export const Up = new MoveType(-1, 0, "up");
+export const Left = new MoveType(0, -1, "left");
+export const Right = new MoveType(0, 1, "right");
+export const NoMove = new MoveType(0, 0, "*");  // no move is possible
+
+export class Coordinate {
+    readonly row : number;
+    readonly column : number;
+
+    constructor(row:number, column:number) {
+      this.row = row;
+      this.column = column;
+    }
+}
+
+export class Piece {
+    readonly width : number;
+    readonly height : number;
+    readonly isWinner : boolean;
+             row : number;
+             column : number;
+
+    constructor(w, h, isWinner) {
+        this.width = w;
+        this.height = h;
+        this.isWinner = isWinner;
+        this.row = 0;
+        this.column = 0;
+    }
+}
+
+export class Puzzle {
+    readonly numRows : number;
+    readonly numColumns : number;
+    readonly destination : Coordinate;
+    readonly finalMove : MoveType;
+
+    constructor(numRows, numColumns, destination, finalMove) {
+        this.numRows = numRows;
+        this.numColumns = numColumns;
+        this.destination = destination;
+        this.finalMove = finalMove;
+        this.selected = null;
+    }
+}
+
+export class Model {
+    puzzle : Puzzle;
+    numMoves : number;
+    victory : boolean;
+
+    // info is going to be JSON-encoded puzzle
+    constructor(info) {
+        this.initialize(info);
+    }
+
+    initialize(info) {
+        let numRows = parseInt(info.board.rows);
+        let numColumns = parseInt(info.board.columns);
+        let destination = new Coordinate(parseInt(info.board.destination.row), parseInt(info.board.destination.column))
+        let finalMove = MoveType.parse(info.board.finalMove);
+
+        this.puzzle = new Puzzle(numRows, numColumns, destination, finalMove)
+        this.numMoves = 0;
+        this.victory = false;
+    }
+}
+[~model.ts]
+
+1b. Create puzzle.ts file
+
+[puzzle.ts]
+/** Configuration for pre-existing puzzles. */
+const puzzleInformation = 
+{
+  "name": "WoodPuzzle 4x5",
+  "board" : {
+     "rows" : "5",
+     "columns" : "4",
+     "target" : "B",
+     "destination" : {
+       "row" : "3",
+       "column" : "1"
+     },
+     "exit" : {
+       "start"    : "1",
+       "end"      : "2"
+     },
+     "finalMove" : "Down"
+  },
+  "pieces" : [
+    { "label" : "A",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "2"
+    },
+    { "label" : "B",
+      "isWinner" : "true",
+      "width" : "2",
+      "height" : "2"
+    },
+    { "label" : "C",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "2"
+    },
+    { "label" : "D",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "2"
+    },
+    { "label" : "E",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "1"
+    },
+    { "label" : "F",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "1"
+    },
+    { "label" : "G",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "2"
+    },
+    { "label" : "H",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "1"
+    },
+    { "label" : "I",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "1"
+    },
+    { "label" : "J",
+      "isWinner" : "false",
+      "width" : "2",
+      "height" : "1"
+    }
+  ],
+  "locations" : [
+    { "piece" : "A",
+      "location" : {
+         "row"    : "0", 
+         "column" : "0" 
+      }
+    },
+    { "piece" : "B",
+      "location" : {
+         "row"    : "0", 
+         "column" : "1" 
+      }
+    },
+    { "piece" : "C",
+      "location" : {
+         "row"    : "0", 
+         "column" : "3" 
+      }
+    },
+    { "piece" : "D",
+      "location" : {
+         "row"    : "2", 
+         "column" : "0" 
+      }
+    },
+    { "piece" : "E",
+      "location" : {
+         "row"    : "2", 
+         "column" : "1" 
+      }
+    },
+    { "piece" : "F",
+      "location" : {
+         "row"    : "2", 
+         "column" : "2" 
+      }
+    },
+    { "piece" : "G",
+      "location" : {
+         "row"    : "2", 
+         "column" : "3" 
+      }
+    },
+    { "piece" : "H",
+      "location" : {
+         "row"    : "3", 
+         "column" : "1" 
+      }
+    },
+    { "piece" : "I",
+      "location" : {
+         "row"    : "3", 
+         "column" : "2" 
+      }
+    },
+    { "piece" : "J",
+      "location" : {
+         "row"    : "4", 
+         "column" : "1" 
+      }
+    }
+  ]
+};
+
+const puzzleInformationExtra = 
+{
+  "name": "WoodPuzzle 6x6",
+  "board" : {
+     "rows" : "6",
+     "columns" : "6",
+     "target" : "A",
+     "destination" : {
+       "row" : "2",
+       "column" : "4"
+     },
+     "exit" : {
+       "start"    : "2",
+       "end"      : "2"
+     },
+     "finalMove" : "Right"
+  },
+  "pieces" : [
+    { "label" : "A",
+      "isWinner" : "true",
+      "width" : "2",
+      "height" : "1"
+    },
+    { "label" : "B",
+      "isWinner" : "false",
+      "width" : "2",
+      "height" : "1"
+    },
+    { "label" : "C",
+      "isWinner" : "false",
+      "width" : "3",
+      "height" : "1"
+    },
+    { "label" : "D",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "2"
+    },
+    { "label" : "E",
+      "isWinner" : "false",
+      "width" : "1",
+      "height" : "3"
+    },
+    { "label" : "F",
+      "isWinner" : "false",
+      "width" : "2",
+      "height" : "1"
+    },
+    { "label" : "G",
+      "isWinner" : "false",
+      "width" : "2",
+      "height" : "1"
+    }
+  ],
+  "locations" : [
+    { "piece" : "A",
+      "location" : {
+         "row"    : "2", 
+         "column" : "0" 
+      }
+    },
+    { "piece" : "B",
+      "location" : {
+         "row"    : "0", 
+         "column" : "2" 
+      }
+    },
+    { "piece" : "C",
+      "location" : {
+         "row"    : "1", 
+         "column" : "1" 
+      }
+    },
+    { "piece" : "D",
+      "location" : {
+         "row"    : "2", 
+         "column" : "3" 
+      }
+    },
+    { "piece" : "E",
+      "location" : {
+         "row"    : "3", 
+         "column" : "1" 
+      }
+    },
+    { "piece" : "F",
+      "location" : {
+         "row"    : "4", 
+         "column" : "2" 
+      }
+    },
+    { "piece" : "G",
+      "location" : {
+         "row"    : "4", 
+         "column" : "4" 
+      }
+    }
+  ]
+};
+
+export { puzzleInformation, puzzleInformationExtra };
+[~puzzle.ts]
+
+1c. modify page.tsx file to only contain the following
+
+[page.tsx]
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Hello there!!</h1>
+    </main>
+  );
+}
+[~page.tsx]
+
+2. npm run dev 
+
+[follow instructions https://nextjs.org/docs/app/building-your-application/testing/vitest]
+
+3. set up testing (manually)
+
+npm install -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom
+
+4. Create vitest.config.ts in the root of your project directory
+
+import { defineConfig } from 'vitest/config'
+import react from '@vitejs/plugin-react'
+ 
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    environment: 'jsdom'
+  },
+})
+
+5. Modify package.json to include "test" : "vitest" under scripts. Like this:
+
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint":"next lint",
+    "test": "vitest"
+  }
+}
+
+6. Make sure you create N.test.ts for every N.ts file you want to test
+
+6a. create model.test.ts file
+
+[model.test.ts]
+import { expect, test } from 'vitest'
+import { MoveType, Up, Down, Left, Right, NoMove } from './model.ts'
+import { Coordinate, Piece, Puzzle, Model } from './model.ts'
+import { puzzleInformation } from './puzzle.ts'
+
+test('MoveType', () => {
+
+  expect(MoveType.parse("down")).toBe(Down)
+  expect(MoveType.parse("up")).toBe(Up)
+  expect(MoveType.parse("left")).toBe(Left)
+  expect(MoveType.parse("right")).toBe(Right)
+
+  expect(MoveType.parse("--BAD--")).toBe(NoMove)
+})
+
+test('Coordinate', () => {
+  let c1 = new Coordinate(2, 3)
+  expect(c1.row).toBe(2)
+  expect(c1.column).toBe(3)
+})
+
+test('Piece', () => {
+  let p1 = new Piece(2, 1, false)
+
+  expect(p1.width).toBe(2)
+  expect(p1.height).toBe(1)
+  expect(p1.isWinner).toBe(false)
+})
+
+test('Puzzle', () => {
+  let pz = new Puzzle(4, 5, new Coordinate(2, 3), Down)
+
+  expect(pz.numRows).toBe(4)
+  expect(pz.numColumns).toBe(5)
+
+  // use 'toStrictEqual' when object structure is to be compared, and not just ==
+  expect(pz.destination).toStrictEqual(new Coordinate(2, 3))
+  expect(pz.finalMove).toBe(Down)
+})
+
+test('Model', () => {
+  let m = new Model(puzzleInformation)
+
+  expect(m.numMoves).toBe(0)
+  expect(m.victory).toBe(false)
+
+  // use 'toStrictEqual' when object structure is to be compared, and not just ==
+  expect(m.puzzle.numRows).toBe(5)
+  expect(m.puzzle.numColumns).toBe(4)
+
+})
+[~model.test.ts]
+
+7. Execute by command:
+
+npm run test
+
+8. Install code coverage
+
+npm install -D @vitest/coverage-v8
+
+9. Code Coverage as follows: 
+
+  npm run test -- --run --reporter verbose --coverage
+
+

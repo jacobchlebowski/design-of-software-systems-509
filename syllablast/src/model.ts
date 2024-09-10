@@ -47,18 +47,19 @@ export class Model{
     victory : boolean;
 
     //configuration is going to be JSON-encoded puzzle
-    constructor(configuration){
-        this.initialize(configuration);
+    constructor(info){
+        this.initialize(info);
     }
 
-    initialize(configuration){
+    initialize(info){
         //initialize the following:
-        let numRows = parseInt(configuration.board.rows);
-        let numColumns = parseInt(configuration.board.columns);
-        let syllables = configuration.syllables;
+        let numRows = parseInt(info.board.rows);
+        let numColumns = parseInt(info.board.columns);
+        let syllables = info.syllables;
         let selected = [Syllable,Syllable];
         let previousMoves = [];
-        let parentWords = configuration.parentWords;
+        let parentWords = info.parentWords;
+
 
         this.puzzle = new Puzzle(numRows, numColumns, syllables, selected, previousMoves, parentWords);
         this.numMoves = 0;
