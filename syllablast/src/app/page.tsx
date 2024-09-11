@@ -46,7 +46,7 @@ export default function Home() {
     selectSyllable(model, canvasRef.current, e);
     console.log(model.puzzle.selected)
 
-    setRedraw[redraw +1]
+    setRedraw(redraw +1)
   }
 
 
