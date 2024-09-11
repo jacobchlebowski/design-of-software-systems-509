@@ -20,10 +20,10 @@ export function selectOrDeselectSyllable(m:Model, canvas:any, e:any){
   //either selected the chosen syllable or set to 'undefined'
   if(syllable === undefined){
     //do nothing
-   }else if(m.puzzle.selected.length < 2 ){ //if the array is not full, (also check EXACT EXACT same syllable isn't already in array)
+   }else if(m.puzzle.selected.length < 2 && !m.puzzle.selected.includes(syllable)){ //if the array is not full, (also check EXACT EXACT same syllable isn't already in array)
     m.puzzle.selected.push(syllable);
   }else{
-    console.log("CANNOT FIT ANOTHER SYLLABLE")
+    console.log("CANNOT FIT ANOTHER SYLLABLE OR SYLLABLE IS ALREADY IN SELECTED")
   }
 }
 
@@ -42,7 +42,7 @@ export default function Home() {
   
 
   //low-level controller
-  const handleClick = (e:any) => {
+  const handleCanvasClick = (e:any) => {
     selectOrDeselectSyllable(model, canvasRef.current, e);
     console.log(model.puzzle.selected)
 
@@ -53,7 +53,7 @@ export default function Home() {
   //RENDER
   return (
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <canvas ref={canvasRef} className="puzzle" width={500} height={500} onClick={handleClick}></canvas>
+        <canvas ref={canvasRef} className="puzzle" width={500} height={500} onClick={handleCanvasClick}></canvas>
         <label className="nummoves">{"Number of Moves:" + model.numMoves}</label>
         <label className="score">Score:</label>
 

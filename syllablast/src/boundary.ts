@@ -50,7 +50,7 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
                 //setup and fill text
                 ctx.font = '20px Arial';
                 ctx.fillStyle='white';
-                ctx.fillText("hello",rect.x + rect.width/2 - 20,rect.y + rect.height/2);
+                ctx.fillText(syllable.getSyllable(),rect.x + rect.width/2 - 20,rect.y + rect.height/2);
             } else{
                 //WHATEVER IS NOT SELECTED MAKE LIGHT BLUE, but still display the syllable "label"
                 ctx.fillStyle = 'blue';
@@ -59,7 +59,7 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
                 //setup and fill text
                 ctx.font = '20px Arial';
                 ctx.fillStyle='white';
-                ctx.fillText("hello",rect.x + rect.width/2 - 20,rect.y + rect.height/2);
+                ctx.fillText(syllable.getSyllable(),rect.x + rect.width/2 - 20,rect.y + rect.height/2);
             }
 
         //  //draw the rectangle (each syllable) and add the syllable
