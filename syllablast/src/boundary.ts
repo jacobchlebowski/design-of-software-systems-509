@@ -37,8 +37,9 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
                     ctx.fillStyle = 'yellow' //change its color to yellow
                 }
             } else{
-            ctx.fillStyle = 'lightblue';    //NOTHING IS SELECTED
-         }
+                // ctx.fillStyle = 'lightblue';    //NOTHING IS SELECTED
+                ctx.fillStyle = 'lightblue';
+            }
 
          //draw the rectangle (each syllable)
          ctx.shadowBlur = 0;
