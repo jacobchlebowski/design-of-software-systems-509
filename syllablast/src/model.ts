@@ -86,7 +86,8 @@ export class Model{
         let numColumns = parseInt(info.board.columns);
 
         //Selected Array of Size 2
-        var selected:Array<Syllable> = new Array<Syllable>(2);
+        // var selected:Array<Syllable> = new Array<Syllable>(2);
+        let selected = [];
         let previousMoves = [];
 
         //Grab all parent words
