@@ -37,13 +37,16 @@ export class Syllable {
 
 //Puzzle
 export class Puzzle{
+  static selected(selected: any) {
+    throw new Error('Method not implemented.');
+  }
     readonly numRows : number;
     readonly numColumns : number;
     readonly allSyllables : Syllable[];
-    readonly selected : Syllable[];
+    readonly selected : Syllable[];     // readonly selected:Array<Syllable> = new Array<Syllable>(2);
     readonly previousMoves : Syllable[];
     readonly allParentWords : string[][];
-             syllables : Array<Syllable> | undefined;
+             syllables : Array<Syllable>;
 
     constructor(numRows:number, numColumns:number, allSyllables:Syllable[], selected:Syllable[], previousMoves:Syllable[], allParentWords:string[][]){
         this.numRows = numRows;
@@ -52,6 +55,10 @@ export class Puzzle{
         this.selected = selected;
         this.previousMoves = previousMoves;
         this.allParentWords = allParentWords;
+    }
+
+    getSelected(){
+        return this.selected;
     }
 
     initialize(syllables:Array<Syllable>){

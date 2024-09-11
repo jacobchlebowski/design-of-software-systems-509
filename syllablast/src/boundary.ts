@@ -24,6 +24,11 @@ export class Rectangle {
         this.width = width;
         this.height = height;
     }
+
+    /** does the (x,y) point exist within the rectangle */
+    contains(x:number, y:number) : boolean {
+        return this.x >= this.x && x <= (this.x + this.width) && y >= this.y && y <= (this.y + this.height);
+    }
 }
 
 export function drawPuzzle (ctx:any, puzzle:Puzzle) {
