@@ -38,19 +38,24 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
     puzzle.syllables?.forEach(syllable => {
          let rect = computeRectangle(syllable);
          if (selected.includes(syllable)){       //if the syllable is in selected
-                ctx.fillStyle = 'yellow' //change its color to yellow
+                ctx.strokeStyle = 'orange' //change its color to yellow
+                ctx.lineWidth = 5;
+                ctx.strokeRect(rect.x, rect.y, rect.width, rect.height)
+                ctx.fillStyle = 'blue'
+                ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
             } else{
                 //WHATEVER IS NOT SELECTED MAKE LIGHT BLUE
-                ctx.fillStyle = 'lightblue';
+                ctx.fillStyle = 'blue';
+                ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
             }
 
-         //draw the rectangle (each syllable) and add the syllable
-         ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
-         ctx.fillStyle='black';
-         ctx.font = '10px Arial';
-         ctx.textAlign = 'right';
-         ctx.textBaseline = 'bottom';
-         ctx.fillText("hello",rect.width,rect.height);
+        //  //draw the rectangle (each syllable) and add the syllable
+        //  ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
+        //  ctx.fillStyle='black';
+        //  ctx.font = '10px Arial';
+        //  ctx.textAlign = 'right';
+        //  ctx.textBaseline = 'bottom';
+        //  ctx.fillText("hello",rect.width,rect.height);
     })
 }
 
