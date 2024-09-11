@@ -37,9 +37,9 @@ export class Syllable {
 
 //Puzzle
 export class Puzzle{
-  static selected(selected: any) {
-    throw new Error('Method not implemented.');
-  }
+//   static selected(selected: any) {
+//     throw new Error('Method not implemented.');
+//   }
     readonly numRows : number;
     readonly numColumns : number;
     readonly allSyllables : Syllable[];

@@ -20,7 +20,7 @@ export function selectSyllable(m:Model, canvas:any, e:any){
   //either selected the chosen syllable or set to 'undefined'
   if(syllable === undefined){
     //do nothing
-  }else{
+  }else if(m.puzzle.selected.length < 2 ){
     m.puzzle.selected.push(syllable);
   }
 }
