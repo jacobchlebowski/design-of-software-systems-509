@@ -38,15 +38,28 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
     puzzle.syllables?.forEach(syllable => {
          let rect = computeRectangle(syllable);
          if (selected.includes(syllable)){       //if the syllable is in selected
-                ctx.strokeStyle = 'orange' //change its color to yellow
-                ctx.lineWidth = 5;
-                ctx.strokeRect(rect.x, rect.y, rect.width, rect.height)
+                //stroke outline
+                ctx.strokeStyle = 'orange' //outline in orange when selected
+                ctx.lineWidth = 10;
+                //color to fill syllable
                 ctx.fillStyle = 'blue'
+                //fill and display rect
+                ctx.strokeRect(rect.x, rect.y, rect.width, rect.height)
                 ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
+
+                //setup and fill text
+                ctx.font = '20px Arial';
+                ctx.fillStyle='white';
+                ctx.fillText("hello",rect.x + rect.width/2 - 20,rect.y + rect.height/2);
             } else{
-                //WHATEVER IS NOT SELECTED MAKE LIGHT BLUE
+                //WHATEVER IS NOT SELECTED MAKE LIGHT BLUE, but still display the syllable "label"
                 ctx.fillStyle = 'blue';
                 ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
+
+                //setup and fill text
+                ctx.font = '20px Arial';
+                ctx.fillStyle='white';
+                ctx.fillText("hello",rect.x + rect.width/2 - 20,rect.y + rect.height/2);
             }
 
         //  //draw the rectangle (each syllable) and add the syllable
