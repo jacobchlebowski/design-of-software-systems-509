@@ -51,11 +51,11 @@ const configuration1 =
             "location" : {"row" : "2", "column" : "1"}
         },
         {
-            "label" : "mac", 
+            "label" : "mac",
             "location" : {"row" : "2", "column" : "2"}
         },
         {
-            "label" : "un", 
+            "label" : "un",
             "location" : {"row" : "2", "column" : "3"}
         },
         {

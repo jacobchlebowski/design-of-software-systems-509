@@ -8,7 +8,7 @@ var actualPuzzle = configuration1;
 
 
 //controller(s)
-export function selectSyllable(m:Model, canvas:any, e:any){
+export function selectOrDeselectSyllable(m:Model, canvas:any, e:any){
   const canvasRect = canvas.getBoundingClientRect();
 
   // find first syllable piece on which mouse was pressed (if one exists)
@@ -20,7 +20,7 @@ export function selectSyllable(m:Model, canvas:any, e:any){
   //either selected the chosen syllable or set to 'undefined'
   if(syllable === undefined){
     //do nothing
-   }else if(m.puzzle.selected.length < 2 ){
+   }else if(m.puzzle.selected.length < 2 ){ //if the array is not full, (also check EXACT EXACT same syllable isn't already in array)
     m.puzzle.selected.push(syllable);
   }else{
     console.log("CANNOT FIT ANOTHER SYLLABLE")
@@ -43,7 +43,7 @@ export default function Home() {
 
   //low-level controller
   const handleClick = (e:any) => {
-    selectSyllable(model, canvasRef.current, e);
+    selectOrDeselectSyllable(model, canvasRef.current, e);
     console.log(model.puzzle.selected)
 
     setRedraw(redraw +1)

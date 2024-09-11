@@ -40,13 +40,17 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
          if (selected.includes(syllable)){       //if the syllable is in selected
                 ctx.fillStyle = 'yellow' //change its color to yellow
             } else{
-                // ctx.fillStyle = 'lightblue';    //NOTHING IS SELECTED
+                //WHATEVER IS NOT SELECTED MAKE LIGHT BLUE
                 ctx.fillStyle = 'lightblue';
             }
 
-         //draw the rectangle (each syllable)
-         ctx.shadowBlur = 0;
+         //draw the rectangle (each syllable) and add the syllable
          ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
+         ctx.fillStyle='black';
+         ctx.font = '10px Arial';
+         ctx.textAlign = 'right';
+         ctx.textBaseline = 'bottom';
+         ctx.fillText("hello",rect.width,rect.height);
     })
 }
 
