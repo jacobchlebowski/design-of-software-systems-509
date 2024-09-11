@@ -37,7 +37,8 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
 
     puzzle.syllables?.forEach(syllable => {
          let rect = computeRectangle(syllable);
-         if (selected[0] !== undefined && selected[1] !== undefined){       //if AT LEAST ONE THING IS SELECTED
+         if (selected.length > 0){       //if AT LEAST ONE THING IS SELECTED
+            console.log("IN HERE")
             for(let p of selected){ //FOR EVERY ITEM THATS SELECTED
                     ctx.fillStyle = 'yellow' //change its color to yellow
                 }

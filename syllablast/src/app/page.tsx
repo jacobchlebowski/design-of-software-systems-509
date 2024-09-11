@@ -45,6 +45,8 @@ export default function Home() {
   const handleClick = (e:any) => {
     selectSyllable(model, canvasRef.current, e);
     console.log(model.puzzle.selected)
+
+    setRedraw[redraw +1]
   }
 
 
