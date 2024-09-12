@@ -192,6 +192,10 @@ export class Model{
     updateScore(){
         //update score by each row...
         this.scoreCounter += 0;
+        //we need to check the entire board... for each row and column... with PARENT WORDS?
+        //puzzle.syllables?.forEach(syllable => { /** DO SOMETHING IN HERE FOR EACH SYLLABLE? */ }
+        //for each syllable that's in column 0, we check if its the first in the parent word, and then we traverse and add points, and make it green
+        
     }
 
     checkForVictory() : boolean {
