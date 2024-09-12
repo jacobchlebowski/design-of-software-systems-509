@@ -31,9 +31,15 @@ export function selectOrDeselectSyllable(m:Model, canvas:any, e:any){
 
 export function swapSyllable(m:Model){
   let puzzle = m.puzzle;
+  //grab the syllables off of selected
+  let syllable2 = puzzle.selected.pop()
+  let syllable1 = puzzle.selected.pop()
 
-  //Swap the syllables... pop them and swap and set each of their new coordinates
-  // puzzle.swap(selected1,selected2);
+  //Swap the syllables
+  if(syllable1 !== undefined && syllable2 !== undefined){
+    m.swap(syllable1, syllable2)
+  }
+
 
   //add swap to previous moves (add both selected syllables to previousMoves[])
   
@@ -65,7 +71,7 @@ export default function Home() {
   //low-level controller
   const handleCanvasClick = (e:any) => {
     selectOrDeselectSyllable(model, canvasRef.current, e);
-    console.log(model.puzzle.selected)
+    //console.log(model.puzzle.selected)
     setRedraw(redraw +1)
   }
 
@@ -81,9 +87,9 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <canvas ref={canvasRef} className="puzzle" width={500} height={500} onClick={handleCanvasClick}></canvas>
         <label className="nummoves">{"Number of Moves: " + model.numMoves}</label>
-        <label className="score">Score:</label>
+        <label className="score">{"Score: " + model.scoreCounter}</label>
 
-        <div className="buttons"> //numMoves, scoreCounter, victory
+        <div className="buttons">
         <button className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable()}>Swap</button>
           <button className="button resetbutton">Reset</button>
           <button className="button undobutton">Undo</button>

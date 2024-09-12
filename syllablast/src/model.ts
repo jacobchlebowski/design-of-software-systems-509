@@ -11,7 +11,7 @@ export class Coordinate {
 
 //Syllable
 export class Syllable {
-    readonly location : Coordinate;
+    location : Coordinate;
     readonly syllable : string;
 
     constructor(location:Coordinate,syllable:string){
@@ -62,13 +62,6 @@ export class Puzzle{
         //make sure to create NEW Syllable objects
         this.syllables = syllables.map(s => s.copy());
     }
-
-    // swap(syllable1:Syllable,syllable2:Syllable){
-    //     let s1Coords = syllable1.location;
-    //     let s2Coords = syllable2.location;
-    //     syllable1.setLocation(s2Coords);
-    //     syllable2.setLocation(s1Coords);
-    // }
 
 }
 
@@ -129,6 +122,34 @@ export class Model{
         if(this.puzzle.selected.length !== 2){ return false; }
 
         return true;
+    }
+
+    swap(syllable1:Syllable,syllable2:Syllable){
+        let s1Location = syllable1.location;
+        let s2Location = syllable2.location;
+        let s1Index = -1;
+        let s2Index = -1;
+        
+        //get index of 2 syllables
+        this.puzzle.syllables.forEach(syllable => {
+            if(syllable1 === syllable){
+                s1Index = this.puzzle.syllables.indexOf(syllable)
+                syllable.location = s2Location;
+            } else if(syllable2 === syllable){
+                s2Index = this.puzzle.syllables.indexOf(syllable)
+                syllable.location = s1Location;
+            }
+        })
+        //dont let these change
+        const index1 = s1Index;
+        const index2 = s2Index;
+        const temp = this.puzzle.syllables[index1]
+        //swap them!
+        this.puzzle.syllables[index1] = this.puzzle.syllables[index2];
+        this.puzzle.syllables[index2] = temp;
+
+        
+
     }
 
     updateMoveCount(delta:number){

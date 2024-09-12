@@ -61,14 +61,6 @@ export function drawPuzzle (ctx:any, puzzle:Puzzle) {
                 ctx.fillStyle='white';
                 ctx.fillText(syllable.getSyllable(),rect.x + rect.width/2 - 20,rect.y + rect.height/2);
             }
-
-        //  //draw the rectangle (each syllable) and add the syllable
-        //  ctx.fillRect(rect.x, rect.y, rect.width, rect.height)
-        //  ctx.fillStyle='black';
-        //  ctx.font = '10px Arial';
-        //  ctx.textAlign = 'right';
-        //  ctx.textBaseline = 'bottom';
-        //  ctx.fillText("hello",rect.width,rect.height);
     })
 }
 
