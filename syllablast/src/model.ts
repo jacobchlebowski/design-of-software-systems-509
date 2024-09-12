@@ -37,9 +37,6 @@ export class Syllable {
 
 //Puzzle
 export class Puzzle{
-//   static selected(selected: any) {
-//     throw new Error('Method not implemented.');
-//   }
     readonly numRows : number;
     readonly numColumns : number;
     readonly allSyllables : Syllable[];
@@ -65,6 +62,13 @@ export class Puzzle{
         //make sure to create NEW Syllable objects
         this.syllables = syllables.map(s => s.copy());
     }
+
+    // swap(syllable1:Syllable,syllable2:Syllable){
+    //     let s1Coords = syllable1.location;
+    //     let s2Coords = syllable2.location;
+    //     syllable1.setLocation(s2Coords);
+    //     syllable2.setLocation(s1Coords);
+    // }
 
 }
 
@@ -116,6 +120,28 @@ export class Model{
         this.numMoves = 0;
         this.scoreCounter = 0;
         this.victory = false;
+    }
+
+
+
+    swapAvailable() : boolean {
+        //if "selected" is not equal to 2, then we cannot swap
+        if(this.puzzle.selected.length !== 2){ return false; }
+
+        return true;
+    }
+
+    updateMoveCount(delta:number){
+        this.numMoves += delta;
+    }
+
+    updateScore(){
+        //update score by each row...
+        this.scoreCounter += 1;
+    }
+
+    checkForVictory() : boolean {
+        return false;
     }
 
 }

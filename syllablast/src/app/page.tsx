@@ -7,7 +7,7 @@ import { computeRectangle, redrawCanvas } from '../boundary'
 var actualPuzzle = configuration1;
 
 
-//controller(s)
+//CONTROLLER(S)
 export function selectOrDeselectSyllable(m:Model, canvas:any, e:any){
   const canvasRect = canvas.getBoundingClientRect();
 
@@ -18,19 +18,37 @@ export function selectOrDeselectSyllable(m:Model, canvas:any, e:any){
   })
 
   //either selected the chosen syllable or set to 'undefined'
+  let selected = m.puzzle.selected;
   if(syllable === undefined){/** do nothing */ }
-  else if(m.puzzle.selected.length < 2 && !m.puzzle.selected.includes(syllable)){  //if "selected" isn't full and the syllable isn't already selected...
-    m.puzzle.selected.push(syllable);
-  }else if(m.puzzle.selected.includes(syllable)){ //if its already selected, then we can deselect it
-    let index = m.puzzle.selected.indexOf(syllable);
-    m.puzzle.selected.splice(index,1); //remove the syllable from the selected
+  else if(selected.length < 2 && !selected.includes(syllable)){  //if "selected" isn't full and the syllable isn't already selected...
+    selected.push(syllable);
+  }else if(selected.includes(syllable)){ //if its already selected, then we can deselect it
+    let index = selected.indexOf(syllable);
+    selected.splice(index,1); //remove the syllable from the selected
   }
 }
 
 
+export function swapSyllable(m:Model){
+  let puzzle = m.puzzle;
+
+  //Swap the syllables... pop them and swap and set each of their new coordinates
+  // puzzle.swap(selected1,selected2);
+
+  //add swap to previous moves (add both selected syllables to previousMoves[])
+  
+
+  //set number of moves to numMoves+1...
+  m.updateMoveCount(+1);
+  //update score
+  m.updateScore()
+  //check for victory
+  m.checkForVictory()
+}
 
 
 
+/**====================================================================================================================== */
 export default function Home() {
   //initial instantiation of the Model comes from the actualPuzzle
   const [model, setModel] = React.useState(new Model(actualPuzzle))
@@ -48,9 +66,14 @@ export default function Home() {
   const handleCanvasClick = (e:any) => {
     selectOrDeselectSyllable(model, canvasRef.current, e);
     console.log(model.puzzle.selected)
-
     setRedraw(redraw +1)
   }
+
+    //low-level controller
+    const handleSwap = (e:any) => {
+      swapSyllable(model);
+      setRedraw(redraw +1)
+    }
 
 
   //RENDER
@@ -60,8 +83,8 @@ export default function Home() {
         <label className="nummoves">{"Number of Moves: " + model.numMoves}</label>
         <label className="score">Score:</label>
 
-        <div className="buttons">
-        <button className="button swapbutton">Swap</button>
+        <div className="buttons"> //numMoves, scoreCounter, victory
+        <button className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable()}>Swap</button>
           <button className="button resetbutton">Reset</button>
           <button className="button undobutton">Undo</button>
           <button className="button configuration1button">Configuration1</button>
