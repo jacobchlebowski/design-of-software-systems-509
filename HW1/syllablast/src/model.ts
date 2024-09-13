@@ -93,6 +93,7 @@ export class Model{
             let word = [i.firstSyll,i.secondSyll,i.thirdSyll,i.fourthSyll];
             allParentWords.push(word);
         }
+        
 
         //Grab all syllables
         var allSyllables:Array<Syllable> = [];
@@ -192,9 +193,29 @@ export class Model{
     updateScore(){
         //update score by each row...
         this.scoreCounter += 0;
-        //we need to check the entire board... for each row and column... with PARENT WORDS?
-        //puzzle.syllables?.forEach(syllable => { /** DO SOMETHING IN HERE FOR EACH SYLLABLE? */ }
-        //for each syllable that's in column 0, we check if its the first in the parent word, and then we traverse and add points, and make it green
+        
+        //just check first syllable of each word first
+        for(let r=0; r<16;r+=4){
+            // console.log(this.puzzle.syllables[r])
+            //if it equals ANY of the parentsWords first syllables, add a point, and then we wanna traverse the rest of those columns
+            if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[0][0]){
+                this.scoreCounter++;
+            }
+            if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[1][0]){
+                this.scoreCounter++;
+            }
+            if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[2][0]){
+                this.scoreCounter++;
+            }
+            if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[3][0]){
+                this.scoreCounter++;
+            }
+
+        }
+
+      
+  
+
         
     }
 
