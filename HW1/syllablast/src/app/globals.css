@@ -64,6 +64,15 @@ body {
   top: 35px;
 }
 
+.congratulationsMessage {
+  position: absolute;
+  left: 550px;
+  top: 130px;
+  color: yellow;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .score {
   position: absolute;
   left: 550px;

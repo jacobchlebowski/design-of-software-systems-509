@@ -195,16 +195,9 @@ export class Model{
         
         //just check first syllable of each word first
         for(let r=0; r<16;r+=4){
-            // console.log(this.puzzle.syllables[r])
             //if it equals ANY of the parentsWords first syllables, add a point, and then we wanna traverse the rest of those columns
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[0][0]){
-                // this.scoreCounter++;
-                //THEN, check each column of that row to ensure each subsequent syllable equals parent words at row 0, column p...
-                // for(let p=0; p<4; p++){
-                //     // console.log(this.puzzle.syllables[r+p])
-                //     //now we need to check to see if each is equal to the next in parent words...
-                //     console.log(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[0][p])
-                // }
+                //traverse rest of the columns and add a point if it equals that parent word syllable
                 let p=0;
                 while(p !== 4){
                     if(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[0][p]){
@@ -250,15 +243,13 @@ export class Model{
             }
 
         }
-
-      
-  
-
-        
     }
 
-    checkForVictory() : boolean {
-        return false;
+    victoryBool() : boolean {
+        if(this.scoreCounter === 16) { return true; }
+        else{
+            return false;
+        }
     }
 
 }
