@@ -202,7 +202,9 @@ export class Model{
                 //THEN, for each subsequnt r++ UNTIL it doesn't not equal allParentWords... check to see if it equals allParentWords[0][r++]?
                 //first, lets just try to traverse each syllable in each column of the first row
                 for(let p=0; p<4; p++){
-                    console.log(this.puzzle.syllables[r+p])
+                    // console.log(this.puzzle.syllables[r+p])
+                    //now we need to check to see if each is equal to the next in parent words...
+                    console.log(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[0][p])
                 }
 
             }
