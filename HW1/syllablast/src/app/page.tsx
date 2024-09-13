@@ -71,6 +71,11 @@ export function undoSwap(m:Model){
 }
 
 
+export function resetPuzzle(m:Model){
+  m.reset();
+}
+
+
 
 /**====================================================================================================================== */
 export default function Home() {
@@ -86,11 +91,11 @@ export default function Home() {
   }, [model, redraw])
   
 
-  //low-level controller
-  const handleCanvasClick = (e:any) => {
-    selectOrDeselectSyllable(model, canvasRef.current, e);
-    setRedraw(redraw +1)
-  }
+    //low-level controller
+    const handleCanvasClick = (e:any) => {
+      selectOrDeselectSyllable(model, canvasRef.current, e);
+      setRedraw(redraw +1)
+    }
 
     //low-level controller
     const handleSwap = (e:any) => {
@@ -101,6 +106,12 @@ export default function Home() {
     //low-level controller
     const handleUndoSwap = (e:any) => {
       undoSwap(model);
+      setRedraw(redraw +1)
+    }
+
+    //low-level controller
+    const handleReset = (e:any) => {
+      resetPuzzle(model);
       setRedraw(redraw +1)
     }
 
@@ -115,7 +126,7 @@ export default function Home() {
 
         <div className="buttons">
         <button className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable() || model.victoryBool()}>Swap</button>
-          <button className="button resetbutton">Reset</button>
+          <button className="button resetbutton" onClick={handleReset} disabled={!model.resetAvailable()}>Reset</button>
           <button className="button undobutton" onClick={handleUndoSwap} disabled={!model.undoAvailable() || model.victoryBool()}>Undo</button>
           <button className="button configuration1button">Configuration1</button>
           <button className="button configuration2button">Configuration2</button>

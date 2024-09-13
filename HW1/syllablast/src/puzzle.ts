@@ -76,7 +76,6 @@ const configuration1 =
         }
     ],
     "parentWords" : [
-       //["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"]
        {
         "firstSyll" : "in", 
         "secondSyll" : "vis",
@@ -182,7 +181,6 @@ const configuration2 =
         }
     ],
     "parentWords" : [
-       //["ex","am","in","ing"],["re","in","force","ment"],["in","for","ma","tive"],["ma","te","ri","al"]
        {
         "firstSyll" : "ex", 
         "secondSyll" : "am",
@@ -287,7 +285,6 @@ const configuration3 =
         }
     ],
     "parentWords" : [
-       //["me","chan","i","cal"],["cal","cu","lat","ing"],["im","me","di","ate"],["di","ag","on","al"]
        {
         "firstSyll" : "me", 
         "secondSyll" : "chan",

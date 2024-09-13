@@ -71,10 +71,12 @@ export class Model{
     numMoves : number;
     scoreCounter : number;
     victory : boolean;
+    private initialConfig : any;
 
     //configuration is going to be JSON-encoded puzzle
     constructor(info){
         this.initialize(info);
+        this.initialConfig = info;
     }
 
     initialize(info){
@@ -127,6 +129,13 @@ export class Model{
 
     undoAvailable() : boolean {
         //if "previousMoves" is 2 or more, then we can undo a swap
+        if(this.puzzle.previousMoves.length < 2){ return false; }
+
+        return true;
+    }
+
+    resetAvailable() : boolean {
+        //if "previousMoves" is 2 or more, then we can reset
         if(this.puzzle.previousMoves.length < 2){ return false; }
 
         return true;
@@ -243,6 +252,15 @@ export class Model{
             }
 
         }
+    }
+
+    reset() {
+        //reset puzzle based on configuration name (info.name)?
+        this.initialize(this.initialConfig);
+        //reset numMoves, score, and make sure victory is false
+        this.numMoves = 0;
+        this.scoreCounter = 0;
+        this.victory = false;
     }
 
     victoryBool() : boolean {
