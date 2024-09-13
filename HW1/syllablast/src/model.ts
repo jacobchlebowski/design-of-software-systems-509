@@ -285,7 +285,7 @@ export class Model{
             //switch to config1
             this.initialize(configuration3)
             this.numMoves=0;
-            this.scoreCounter = 1;
+            this.scoreCounter = 0
             this.victory = false;
         }
     }
