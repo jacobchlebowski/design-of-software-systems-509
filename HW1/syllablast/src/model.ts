@@ -198,14 +198,23 @@ export class Model{
             // console.log(this.puzzle.syllables[r])
             //if it equals ANY of the parentsWords first syllables, add a point, and then we wanna traverse the rest of those columns
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[0][0]){
-                this.scoreCounter++;
+                // this.scoreCounter++;
                 //THEN, check each column of that row to ensure each subsequent syllable equals parent words at row 0, column p...
-                for(let p=0; p<4; p++){
-                    // console.log(this.puzzle.syllables[r+p])
-                    //now we need to check to see if each is equal to the next in parent words...
-                    console.log(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[0][p])
+                // for(let p=0; p<4; p++){
+                //     // console.log(this.puzzle.syllables[r+p])
+                //     //now we need to check to see if each is equal to the next in parent words...
+                //     console.log(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[0][p])
+                // }
+                let p=0;
+                while(p !== 4){
+                    if(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[0][p]){
+                        console.log(true)
+                        this.scoreCounter++;
+                        p++
+                    }else{
+                        p=4;
+                    }
                 }
-
             }
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[1][0]){
                 this.scoreCounter++;
