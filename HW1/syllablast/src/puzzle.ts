@@ -306,8 +306,8 @@ const configuration3 =
        {
         "firstSyll" : "di", 
         "secondSyll" : "ag",
-        "thirdSyll" : "on",
-        "fourthSyll" : "al"
+        "thirdSyll" : "o",
+        "fourthSyll" : "nal"
        }
     ]
 }

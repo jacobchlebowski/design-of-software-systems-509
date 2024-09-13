@@ -260,23 +260,32 @@ export class Model{
         //reset puzzle based on configuration name (info.name)?
         this.initialize(this.initialConfig);
         //reset numMoves, score, and make sure victory is false
-        this.numMoves = 0;
-        this.scoreCounter = 0;
-        this.victory = false;
+        // this.numMoves = 0;
+        // this.scoreCounter = 0;
+        // this.victory = false;
     }
 
     changeConfiguration(buttonName:string){
         if(buttonName === "button configuration1button"){
             //switch to config1
             this.initialize(configuration1)
+            this.numMoves=0;
+            this.scoreCounter = 0;
+            this.victory = false;
         }
         if(buttonName === "button configuration2button"){
             //switch to config1
             this.initialize(configuration2)
+            this.numMoves=0;
+            this.scoreCounter = 0;
+            this.victory = false;
         }
         if(buttonName === "button configuration3button"){
             //switch to config1
             this.initialize(configuration3)
+            this.numMoves=0;
+            this.scoreCounter = 0;
+            this.victory = false;
         }
     }
 
