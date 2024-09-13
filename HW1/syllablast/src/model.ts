@@ -208,7 +208,6 @@ export class Model{
                 let p=0;
                 while(p !== 4){
                     if(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[0][p]){
-                        console.log(true)
                         this.scoreCounter++;
                         p++
                     }else{
@@ -217,13 +216,37 @@ export class Model{
                 }
             }
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[1][0]){
-                this.scoreCounter++;
+                let p=0;
+                while(p !== 4){
+                    if(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[1][p]){
+                        this.scoreCounter++;
+                        p++
+                    }else{
+                        p=4;
+                    }
+                }
             }
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[2][0]){
-                this.scoreCounter++;
+                let p=0;
+                while(p !== 4){
+                    if(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[2][p]){
+                        this.scoreCounter++;
+                        p++
+                    }else{
+                        p=4;
+                    }
+                }
             }
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[3][0]){
-                this.scoreCounter++;
+                let p=0;
+                while(p !== 4){
+                    if(this.puzzle.syllables[r+p].syllable === this.puzzle.allParentWords[3][p]){
+                        this.scoreCounter++;
+                        p++
+                    }else{
+                        p=4;
+                    }
+                }
             }
 
         }
