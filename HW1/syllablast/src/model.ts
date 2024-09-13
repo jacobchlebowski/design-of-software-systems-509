@@ -1,3 +1,5 @@
+import { configuration1, configuration2, configuration3 } from "./puzzle";
+
 //Coordinate
 export class Coordinate {
     public row : number;
@@ -261,6 +263,21 @@ export class Model{
         this.numMoves = 0;
         this.scoreCounter = 0;
         this.victory = false;
+    }
+
+    changeConfiguration(buttonName:string){
+        if(buttonName === "button configuration1button"){
+            //switch to config1
+            this.initialize(configuration1)
+        }
+        if(buttonName === "button configuration2button"){
+            //switch to config1
+            this.initialize(configuration2)
+        }
+        if(buttonName === "button configuration3button"){
+            //switch to config1
+            this.initialize(configuration3)
+        }
     }
 
     victoryBool() : boolean {

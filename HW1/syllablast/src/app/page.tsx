@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Model, Syllable } from '../model'
-import { configuration1 } from '../puzzle'
+import { configuration1, configuration2, configuration3 } from '../puzzle'
 import { computeRectangle, redrawCanvas } from '../boundary'
 
 var actualPuzzle = configuration1;
@@ -75,6 +75,10 @@ export function resetPuzzle(m:Model){
   m.reset();
 }
 
+export function chooseConfiguration(m:Model, buttonName:string){
+  m.changeConfiguration(buttonName);
+}
+
 
 
 /**====================================================================================================================== */
@@ -115,6 +119,13 @@ export default function Home() {
       setRedraw(redraw +1)
     }
 
+    //low-level controller
+    const handleConfigurationChange = (e:any) => {
+      let buttonName = e.target.className
+      chooseConfiguration(model,buttonName);
+      setRedraw(redraw +1)
+    }
+
 
   //RENDER
   return (
@@ -128,9 +139,9 @@ export default function Home() {
         <button className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable() || model.victoryBool()}>Swap</button>
           <button className="button resetbutton" onClick={handleReset} disabled={!model.resetAvailable()}>Reset</button>
           <button className="button undobutton" onClick={handleUndoSwap} disabled={!model.undoAvailable() || model.victoryBool()}>Undo</button>
-          <button className="button configuration1button">Configuration1</button>
-          <button className="button configuration2button">Configuration2</button>
-          <button className="button configuration3button">Configuration3</button>
+          <button className="button configuration1button" onClick={handleConfigurationChange}>Configuration1</button>
+          <button className="button configuration2button" onClick={handleConfigurationChange}>Configuration2</button>
+          <button className="button configuration3button" onClick={handleConfigurationChange}>Configuration3</button>
         </div>
 
       </main>
