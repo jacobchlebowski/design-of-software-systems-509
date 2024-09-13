@@ -199,6 +199,12 @@ export class Model{
             //if it equals ANY of the parentsWords first syllables, add a point, and then we wanna traverse the rest of those columns
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[0][0]){
                 this.scoreCounter++;
+                //THEN, for each subsequnt r++ UNTIL it doesn't not equal allParentWords... check to see if it equals allParentWords[0][r++]?
+                //first, lets just try to traverse each syllable in each column of the first row
+                for(let p=0; p<4; p++){
+                    console.log(this.puzzle.syllables[r+p])
+                }
+
             }
             if(this.puzzle.syllables[r].syllable === this.puzzle.allParentWords[1][0]){
                 this.scoreCounter++;
