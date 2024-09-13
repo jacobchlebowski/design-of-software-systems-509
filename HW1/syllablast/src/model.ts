@@ -192,7 +192,6 @@ export class Model{
 
     updateScore(){
         //update score by each row...
-        this.scoreCounter += 0;
         
         //just check first syllable of each word first
         for(let r=0; r<16;r+=4){
