@@ -73,7 +73,7 @@ export class Model{
     numMoves : number;
     scoreCounter : number;
     victory : boolean;
-    private initialConfig : any;
+    initialConfig : any;
 
     //configuration is going to be JSON-encoded puzzle
     constructor(info){
@@ -270,6 +270,7 @@ export class Model{
         if(buttonName === "button configuration1button"){
             //switch to config1
             this.initialize(configuration1)
+            this.initialConfig = configuration1
             this.numMoves=0;
             this.scoreCounter = 0;
             this.victory = false;
@@ -277,6 +278,7 @@ export class Model{
         if(buttonName === "button configuration2button"){
             //switch to config1
             this.initialize(configuration2)
+            this.initialConfig = configuration2
             this.numMoves=0;
             this.scoreCounter = 0;
             this.victory = false;
@@ -284,6 +286,7 @@ export class Model{
         if(buttonName === "button configuration3button"){
             //switch to config1
             this.initialize(configuration3)
+            this.initialConfig = configuration3
             this.numMoves=0;
             this.scoreCounter = 0
             this.victory = false;
