@@ -112,6 +112,7 @@ export class Model{
             p.place(p.location);
         }
 
+
         //create puzzle to be initialized
         this.puzzle = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
         this.puzzle.initialize(allSyllables);
@@ -284,7 +285,7 @@ export class Model{
             //switch to config1
             this.initialize(configuration3)
             this.numMoves=0;
-            this.scoreCounter = 0;
+            this.scoreCounter = 1;
             this.victory = false;
         }
     }
