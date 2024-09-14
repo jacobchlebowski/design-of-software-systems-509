@@ -220,11 +220,11 @@ const configuration3 =
     },
     "syllables": [
         {
-            "label" : "di", 
+            "label" : "al", 
             "location" : {"row" : "0", "column" : "0"}
         },
         {
-            "label" : "im", 
+            "label" : "di", 
             "location" : {"row" : "0", "column" : "1"}
         },
         {
@@ -256,7 +256,7 @@ const configuration3 =
             "location" : {"row" : "2", "column" : "0"}
         },
         {
-            "label" : "nal", 
+            "label" : "im", 
             "location" : {"row" : "2", "column" : "1"}
         },
         {
@@ -268,7 +268,7 @@ const configuration3 =
             "location" : {"row" : "2", "column" : "3"}
         },
         {
-            "label" : "o", 
+            "label" : "on", 
             "location" : {"row" : "3", "column" : "0"}
         },
         {
@@ -306,8 +306,8 @@ const configuration3 =
        {
         "firstSyll" : "di", 
         "secondSyll" : "ag",
-        "thirdSyll" : "o",
-        "fourthSyll" : "nal"
+        "thirdSyll" : "on",
+        "fourthSyll" : "al"
        }
     ]
 }
