@@ -126,7 +126,6 @@ export class Model{
     undoAvailable() : boolean {
         //if "previousMoves" is 2 or more, then we can undo a swap
         if(this.puzzle.previousMoves.length < 2){ return false; }
-
         return true;
     }
 
