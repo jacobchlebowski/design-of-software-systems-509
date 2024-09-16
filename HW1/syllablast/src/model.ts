@@ -104,8 +104,10 @@ export class Model{
         for (let s of info.syllables){
             let coordinate = new Coordinate(parseInt(s.location.row),parseInt(s.location.column))
             let syllable = new Syllable(coordinate,s.label);
+            console.log(syllable)
             allSyllables.push(syllable);
         }
+        
 
         // Place Syllables on board
         for (let p of allSyllables){
@@ -264,10 +266,6 @@ export class Model{
     reset() {
         //reset puzzle based on configuration name (info.name)?
         this.initialize(this.initialConfig);
-        //reset numMoves, score, and make sure victory is false
-        // this.numMoves = 0;
-        // this.scoreCounter = 0;
-        // this.victory = false;
     }
 
     changeConfiguration(buttonName:string){

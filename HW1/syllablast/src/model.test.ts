@@ -37,10 +37,11 @@ test('Puzzle', () => {
 
   expect(pz.numRows).toBe(4)
   expect(pz.numColumns).toBe(4)
-  expect(pz.selected).toBe([]);
-  expect(pz.previousMoves).toBe([]);
-  expect(pz.allSyllables).toBe([s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16])
-  expect(allParentWords).toBe([["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"]])
+  expect(pz.selected).toStrictEqual([]);
+  expect(pz.previousMoves).toStrictEqual([]);
+  // expect(pz.allSyllables).toBe([(new Syllable(new Coordinate(0,0),"ate"))])
+  expect(pz.allSyllables).toStrictEqual([new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa")])
+  expect(allParentWords).toStrictEqual([["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"]])
 
   // // use 'toStrictEqual' when object structure is to be compared, and not just ==
   // expect(pz.destination).toStrictEqual(new Coordinate(2, 3))
