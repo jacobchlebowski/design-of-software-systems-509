@@ -14,7 +14,7 @@ export class Coordinate {
 //Syllable
 export class Syllable {
     location : Coordinate;
-    readonly syllable : string;
+    syllable : string;
 
     constructor(location:Coordinate,syllable:string){
         this.location = location;
@@ -30,10 +30,6 @@ export class Syllable {
         let s = new Syllable(this.location, this.syllable);
         s.place(this.location)
         return s;
-    }
-
-    getSyllable(){
-        return this.syllable;
     }
 }
 
@@ -54,10 +50,6 @@ export class Puzzle{
         this.selected = selected;
         this.previousMoves = previousMoves;
         this.allParentWords = allParentWords;
-    }
-
-    getSelected(){
-        return this.selected;
     }
 
     initialize(syllables:Array<Syllable>){

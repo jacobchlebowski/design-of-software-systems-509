@@ -58,5 +58,18 @@ test('Model', () => {
   // use 'toStrictEqual' when object structure is to be compared, and not just ==
   expect(m.puzzle.numRows).toBe(4)
   expect(m.puzzle.numColumns).toBe(4)
-
 })
+
+
+test('swapAvailable', () => {
+  let m = new Model(configuration1)
+  //if "selected" is not equal to 2, then we cannot swap
+  expect(m.swapAvailable()).toBe(false)
+
+  m.puzzle.selected.push(new Syllable(new Coordinate(0,0),"ter"))
+  m.puzzle.selected.push(new Syllable(new Coordinate(0,1),"ate"))
+
+  //else, we can swap
+  expect(m.swapAvailable()).toBe(true)
+})
+
