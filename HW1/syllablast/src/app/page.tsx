@@ -43,7 +43,6 @@ export function swapSyllable(m:Model){
   //set number of moves to numMoves+1...
   m.updateMoveCount(+1);
   //check and update score
-  m.scoreCounter=0;
   m.updateScore()
   //check for victory
   m.victoryBool()
@@ -64,7 +63,6 @@ export function undoSwap(m:Model){
   //set number of moves to numMoves+1...
   m.updateMoveCount(-1);
   //check and update score
-  m.scoreCounter=0;
   m.updateScore()
 
   /** DON't check for victory */
