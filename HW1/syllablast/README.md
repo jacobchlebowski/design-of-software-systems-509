@@ -1,8 +1,6 @@
 ### Author - jachlebowski@wpi.edu
 
-## Getting Started
-
-Run Syllablast on development server:
+## Run Syllablast
 
 ```bash
 npm run dev
@@ -16,6 +14,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Test Syllablast
+
+Install code coverage if necessary, and then run the test
+
+```bash
+#install code coverage
+npm install -D @vitest/coverage-v8
+#run the test with:
+npm run test
+#or
+npm run test -- --run --reporter verbose --coverage
+```
 
 
 #### Extra info
