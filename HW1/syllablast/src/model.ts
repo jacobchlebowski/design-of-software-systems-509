@@ -104,7 +104,6 @@ export class Model{
         for (let s of info.syllables){
             let coordinate = new Coordinate(parseInt(s.location.row),parseInt(s.location.column))
             let syllable = new Syllable(coordinate,s.label);
-            console.log(syllable)
             allSyllables.push(syllable);
         }
         

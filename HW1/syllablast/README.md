@@ -23,7 +23,7 @@ Install code coverage if necessary, and then run the test
 npm install -D @vitest/coverage-v8
 #run the test with:
 npm run test
-#or
+#or for code coverage, run:
 npm run test -- --run --reporter verbose --coverage
 ```
 
