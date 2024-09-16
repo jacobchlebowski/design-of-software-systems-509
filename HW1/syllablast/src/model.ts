@@ -257,6 +257,8 @@ export class Model{
             }
 
         }
+
+        if(this.scoreCounter === 16){ this.victory = true;} else { this.victory = false;}
     }
 
     reset() {
@@ -292,13 +294,6 @@ export class Model{
             this.numMoves=0;
             this.scoreCounter = 0
             this.victory = false;
-        }
-    }
-
-    victoryBool() : boolean {
-        if(this.scoreCounter === 16) { return true; }
-        else{
-            return false;
         }
     }
 

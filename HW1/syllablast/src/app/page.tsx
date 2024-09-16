@@ -42,10 +42,9 @@ export function swapSyllable(m:Model){
 
   //set number of moves to numMoves+1...
   m.updateMoveCount(+1);
-  //check and update score
+  //check and update score and check for VICTORY
+  m.scoreCounter=0;
   m.updateScore()
-  //check for victory
-  m.victoryBool()
 }
 
 
@@ -128,15 +127,15 @@ export default function Home() {
   //RENDER
   return (
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <canvas ref={canvasRef} className="puzzle" width={500} height={500} onClick={model.victoryBool() ? undefined : handleCanvasClick}></canvas>
+        <canvas ref={canvasRef} className="puzzle" width={500} height={500} onClick={model.victory ? undefined : handleCanvasClick}></canvas>
         <label className="nummoves">{"Number of Moves: " + model.numMoves}</label>
         <label className="score">{"Score: " + model.scoreCounter}</label>
-        {model.victoryBool() && (<label className="congratulationsMessage">{"CONGRATULATIONS"}</label>)}
+        {model.victory && (<label className="congratulationsMessage">{"CONGRATULATIONS"}</label>)}
 
         <div className="buttons">
-        <button className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable() || model.victoryBool()}>Swap</button>
+        <button className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable() || model.victory}>Swap</button>
           <button className="button resetbutton" onClick={handleReset} disabled={!model.resetAvailable()}>Reset</button>
-          <button className="button undobutton" onClick={handleUndoSwap} disabled={!model.undoAvailable() || model.victoryBool()}>Undo</button>
+          <button className="button undobutton" onClick={handleUndoSwap} disabled={!model.undoAvailable() || model.victory}>Undo</button>
           <button className="button configuration1button" onClick={handleConfigurationChange}>Configuration1</button>
           <button className="button configuration2button" onClick={handleConfigurationChange}>Configuration2</button>
           <button className="button configuration3button" onClick={handleConfigurationChange}>Configuration3</button>
