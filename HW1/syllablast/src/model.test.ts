@@ -2,9 +2,7 @@ import { expect, test } from 'vitest'
 import { Coordinate, Syllable, Puzzle, Model } from './model.ts'
 import { configuration1, configuration2, configuration3 } from './puzzle.ts'
 import Home from './app/page.tsx'
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { tree } from 'next/dist/build/templates/app-page';
+import React from 'react'
 
 test('Coordinate', () => {
   let c1 = new Coordinate(2, 3)
@@ -308,5 +306,9 @@ test('victory', () => {
   
   m.updateScore()
   expect(m.victory).toBeTruthy
+})
 
+
+test('page.tsx home', () => {
+  Home()
 })
