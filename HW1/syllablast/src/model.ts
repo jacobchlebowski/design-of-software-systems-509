@@ -73,25 +73,6 @@ export class Model{
     constructor(info) {
         this.initialize(info);
         this.initialConfig = info;
-        this.selectOrDeselectSyllable = (m: Model, canvas: any, e: any) => {
-            const canvasRect = canvas.getBoundingClientRect();
-
-            // find first syllable piece on which mouse was pressed (if one exists)
-            let syllable: Syllable | undefined = m.puzzle.syllables?.find(syllable => {
-                let rect = computeRectangle(syllable);
-                return rect.contains(e.clientX - canvasRect.left, e.clientY - canvasRect.top);
-            });
-
-            // either selected the chosen syllable or set to 'undefined'
-            let selected = m.puzzle.selected;
-            if (syllable === undefined) { /** do nothing */ }
-            else if (selected.length < 2 && !selected.includes(syllable)) {  // if "selected" isn't full and the syllable isn't already selected...
-                selected.push(syllable);
-            } else if (selected.includes(syllable)) { // if it's already selected, then we can deselect it
-                let index = selected.indexOf(syllable);
-                selected.splice(index, 1); // remove the syllable from the selected
-            }
-        };
     }
 
     initialize(info){

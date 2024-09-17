@@ -4,6 +4,7 @@ import { configuration1, configuration2, configuration3 } from './puzzle.ts'
 import Home from './app/page.tsx'
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import { tree } from 'next/dist/build/templates/app-page';
 
 test('Coordinate', () => {
   let c1 = new Coordinate(2, 3)
@@ -150,6 +151,8 @@ test('undoSwap', () => {
 
   //test puzzle
   let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  m.puzzle = pz
+  m.puzzle.syllables = allSyllables;
   
   //commence a swap between s1 and s2
   let syllable3 = pz.allSyllables[0];
@@ -163,40 +166,6 @@ test('undoSwap', () => {
   expect(syllable3.location).toStrictEqual(new Coordinate(0,0))
   expect(syllable4.location).toStrictEqual(new Coordinate(0,1))
 })
-
-
-// test('resetPuzzle', () => {
-//   let m = new Model(configuration1)
-
-//   //then reset
-//   expect(resetPuzzle(m)).toBe(undefined)
-// })
-
-// test('chooseConfiguration', () => {
-//   let m = new Model(configuration1)
-//   let buttonName = "configuration2"
-
-//   //then change configuration
-//   expect(chooseConfiguration(m,buttonName)).toBe(undefined)
-// })
-
-// test('Access GUI', async() => {
-//   const { getByTestId } = render(Home());
-
-//   const swapbutton = getByTestId('swapbutton');
-//   const canvasElement = getByTestId('canvas');
-
-//   // Verify that the swap button is initially disabled
-//   expect(swapbutton.disabled).toBeTruthy();
-
-//   // Simulate a canvas click (the coordinates are based on your game's requirements)
-//   fireEvent.click(canvasElement, { screenX: 436, screenY: 573, clientX: 184, clientY: 440 });
-
-//   // You can then assert how the state should change (e.g., swap button becomes enabled after some interactions)
-//   expect(swapbutton.disabled).toBeFalsy();
-// });
-
-
 
 test('updateScore', () => {
   let m = new Model(configuration1)
@@ -246,4 +215,98 @@ test('updateScore', () => {
   m.swap(syllable9,syllable10);
   m.updateScore()
   expect(m.scoreCounter).toStrictEqual(5)
+})
+
+
+test('updateMoveCount', () => {
+  let m = new Model(configuration1)
+  m.updateMoveCount(+1)
+  expect(m.numMoves).toStrictEqual(1)
+  m.updateMoveCount(-1)
+  expect(m.numMoves).toStrictEqual(0)
+})
+
+test('reset', () => {
+  let m = new Model(configuration1)
+  let numRows = 4;
+  let numColumns = 4;
+  let selected = [];
+  let previousMoves = [];
+
+  let s1 = new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa");
+  var allSyllables:Array<Syllable> = [];
+  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
+
+  var allParentWords:Array<Array<string>> = [];
+  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
+
+  //test puzzle
+  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  m.puzzle = pz
+  m.puzzle.syllables = allSyllables;
+  
+
+
+  //commence a swap between syllables[0] and [1]
+  let syllable3 = pz.allSyllables[0];
+  let syllable4 = pz.allSyllables[1];
+  m.swap(syllable3,syllable4);
+  m.updateScore()
+  expect(m.puzzle.syllables[0].syllable).toStrictEqual("ate")
+  expect(m.puzzle.syllables[1].syllable).toStrictEqual("ter")
+
+  //after reset, we expect the syllables to be back in their original place
+  m.reset()
+  expect(m.puzzle.syllables[0].syllable).toStrictEqual("ter")
+  expect(m.puzzle.syllables[1].syllable).toStrictEqual("ate")
+})
+
+
+test('chooseConfiguration', () => {
+  let m = new Model(configuration1)
+
+  m.changeConfiguration("button configuration1button")
+  expect(m.initialConfig).toStrictEqual(configuration1)
+  m.changeConfiguration("button configuration2button")
+  expect(m.initialConfig).toStrictEqual(configuration2)
+  m.changeConfiguration("button configuration3button")
+  expect(m.initialConfig).toStrictEqual(configuration3)
+})
+
+
+
+
+test('victory', () => {
+  let m = new Model(configuration1)
+  let numRows = 4;
+  let numColumns = 4;
+  let selected = [];
+  let previousMoves = [];
+
+  let s1 = new Syllable(new Coordinate(0,0), "un"), s2 = new Syllable(new Coordinate(0,1), "der"), s3 = new Syllable(new Coordinate(0,2), "wa"), s4 = new Syllable(new Coordinate(0,3), "i"), s5 = new Syllable(new Coordinate(1,0), "af"), s6 = new Syllable(new Coordinate(1,1), "fil"), s7 = new Syllable(new Coordinate(1,2), "i"), s8 = new Syllable(new Coordinate(1,3), "ate"), s9 = new Syllable(new Coordinate(2,0), "im"), s10 = new Syllable(new Coordinate(2,1), "mac"), s11 = new Syllable(new Coordinate(2,2), "u"), s12 = new Syllable(new Coordinate(2,3), "late"), s13 = new Syllable(new Coordinate(3,0), "in"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "ter"), s16 = new Syllable(new Coordinate(3,3), "ble");
+  var allSyllables:Array<Syllable> = [];
+  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
+
+  var allParentWords:Array<Array<string>> = [];
+  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
+
+  //test puzzle
+  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  m.puzzle = pz
+  m.puzzle.syllables = allSyllables;
+  
+
+  //update score before swap
+  m.updateScore()
+  expect(m.victory).toBeFalsy
+
+  //commence a swap between syllables
+  let i1 = pz.allSyllables[3];
+  let ter = pz.allSyllables[14];
+
+  m.swap(i1,ter);
+  
+  m.updateScore()
+  expect(m.victory).toBeTruthy
+
 })
