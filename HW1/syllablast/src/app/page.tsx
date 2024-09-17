@@ -49,7 +49,7 @@ export function swapSyllable(m:Model){
 
 
 
-export function undoSwap(m:any){
+export function undoSwap(m:Model){
   let puzzle = m.puzzle;
   //grab the syllables off of previousMoves
   let syllable2 = puzzle.previousMoves.pop()
