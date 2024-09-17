@@ -222,11 +222,32 @@ test('updateScore', () => {
   m.updateScore()
   expect(m.scoreCounter).toStrictEqual(0)
 
-  // //commence a swap between syllables[0] and [15] for +1 in score
+  //commence a swap between syllables[0] and [14], [1] and [4], [2] and [7], and [3] and [4]
   let syllable3 = pz.allSyllables[0];
-  let syllable4 = pz.allSyllables[15];
+  let syllable4 = pz.allSyllables[14];
+  let syllable5 = pz.allSyllables[1];
+  let syllable6 = pz.allSyllables[4];
+  let syllable7 = pz.allSyllables[2];
+  let syllable8 = pz.allSyllables[7];
+  let syllable9 = pz.allSyllables[3];
+  let syllable10 = pz.allSyllables[4];
   m.swap(syllable3,syllable4);
   m.updateScore()
-  expect(m.scoreCounter).toStrictEqual(0)
+  expect(m.scoreCounter).toStrictEqual(1)
+  expect(m.numMoves).toStrictEqual(1)
 
+  m.swap(syllable5,syllable6);
+  m.updateScore()
+  expect(m.scoreCounter).toStrictEqual(2)
+  expect(m.numMoves).toStrictEqual(2)
+
+  m.swap(syllable7,syllable8);
+  m.updateScore()
+  expect(m.scoreCounter).toStrictEqual(3)
+  expect(m.numMoves).toStrictEqual(3)
+
+  m.swap(syllable9,syllable10);
+  m.updateScore()
+  expect(m.scoreCounter).toStrictEqual(4)
+  expect(m.numMoves).toStrictEqual(4)
 })
