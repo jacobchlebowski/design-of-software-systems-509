@@ -14,9 +14,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-*If it fails to run, you may have to build it first:
+*If it fails to run, you may have to install next:
 ```bash
-npm run build
+npm install next@latest
 ```
 
 ## Test Syllablast
