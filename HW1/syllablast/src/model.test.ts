@@ -4,6 +4,25 @@ import { configuration1, configuration2, configuration3 } from './puzzle.ts'
 import Home from './app/page.tsx'
 import React from 'react'
 
+
+function createPuzzle(): Puzzle {
+  let numRows = 4;
+  let numColumns = 4;
+  let selected = [];
+  let previousMoves = [];
+
+  let s1 = new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa");
+  var allSyllables:Array<Syllable> = [];
+  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
+
+  var allParentWords:Array<Array<string>> = [];
+  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
+
+  //test puzzle
+  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  return pz;
+}
+
 test('Coordinate', () => {
   let c1 = new Coordinate(2, 3)
   expect(c1.row).toBe(2)
@@ -20,21 +39,9 @@ test('Syllable', () => {
 })
 
 test('Puzzle', () => {
-  // let pz = new Puzzle(4, 4, new Coordinate(2, 3), Down)
-  let numRows = 4;
-  let numColumns = 4;
-  let selected = [];
-  let previousMoves = [];
-
   let s1 = new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa");
-  var allSyllables:Array<Syllable> = [];
-  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
-
-  var allParentWords:Array<Array<string>> = [];
-  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
-
   //test puzzle
-  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  let pz = createPuzzle()
 
 
   expect(pz.numRows).toBe(4)
@@ -43,11 +50,7 @@ test('Puzzle', () => {
   expect(pz.previousMoves).toStrictEqual([]);
   // expect(pz.allSyllables).toBe([(new Syllable(new Coordinate(0,0),"ate"))])
   expect(pz.allSyllables).toStrictEqual([new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa")])
-  expect(allParentWords).toStrictEqual([["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"]])
-
-  // // use 'toStrictEqual' when object structure is to be compared, and not just ==
-  // expect(pz.destination).toStrictEqual(new Coordinate(2, 3))
-  // expect(pz.finalMove).toBe(Down)
+  expect(pz.allParentWords).toStrictEqual([["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"]])
 })
 
 test('Model', () => {
@@ -104,22 +107,10 @@ test('resetAvailable', () => {
 
 test('swap', () => {
   let m = new Model(configuration1)
-  // let pz = new Puzzle(4, 4, new Coordinate(2, 3), Down)
-  let numRows = 4;
-  let numColumns = 4;
-  let selected = [];
-  let previousMoves = [];
-
-  let s1 = new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa");
-  var allSyllables:Array<Syllable> = [];
-  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
-
-  var allParentWords:Array<Array<string>> = [];
-  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
 
   //test puzzle
-  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
-  pz.initialize(allSyllables);
+  let pz = createPuzzle()
+  pz.initialize(pz.allSyllables);
   
   //commence a swap between s1 and s2
   let syllable1 = pz.syllables[0];
@@ -134,23 +125,11 @@ test('swap', () => {
 
 test('undoSwap', () => {
   let m = new Model(configuration1)
-  // let pz = new Puzzle(4, 4, new Coordinate(2, 3), Down)
-  let numRows = 4;
-  let numColumns = 4;
-  let selected = [];
-  let previousMoves = [];
-
-  let s1 = new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa");
-  var allSyllables:Array<Syllable> = [];
-  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
-
-  var allParentWords:Array<Array<string>> = [];
-  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
-
+ 
   //test puzzle
-  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  let pz = createPuzzle()
   m.puzzle = pz
-  m.puzzle.syllables = allSyllables;
+  m.puzzle.syllables = pz.allSyllables;
   
   //commence a swap between s1 and s2
   let syllable3 = pz.allSyllables[0];
@@ -167,24 +146,12 @@ test('undoSwap', () => {
 
 test('updateScore', () => {
   let m = new Model(configuration1)
-  let numRows = 4;
-  let numColumns = 4;
-  let selected = [];
-  let previousMoves = [];
-
-  let s1 = new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa");
-  var allSyllables:Array<Syllable> = [];
-  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
-
-  var allParentWords:Array<Array<string>> = [];
-  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
 
   //test puzzle
-  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  let pz = createPuzzle()
   m.puzzle = pz
-  m.puzzle.syllables = allSyllables;
+  m.puzzle.syllables = pz.allSyllables;
   
-
   //update score before swap
   m.updateScore()
   expect(m.scoreCounter).toStrictEqual(0)
@@ -215,7 +182,6 @@ test('updateScore', () => {
   expect(m.scoreCounter).toStrictEqual(5)
 })
 
-
 test('updateMoveCount', () => {
   let m = new Model(configuration1)
   m.updateMoveCount(+1)
@@ -226,24 +192,11 @@ test('updateMoveCount', () => {
 
 test('reset', () => {
   let m = new Model(configuration1)
-  let numRows = 4;
-  let numColumns = 4;
-  let selected = [];
-  let previousMoves = [];
-
-  let s1 = new Syllable(new Coordinate(0,0), "ter"), s2 = new Syllable(new Coordinate(0,1), "ate"), s3 = new Syllable(new Coordinate(0,2), "ble"), s4 = new Syllable(new Coordinate(0,3), "der"), s5 = new Syllable(new Coordinate(1,0), "fil"), s6 = new Syllable(new Coordinate(1,1), "in"), s7 = new Syllable(new Coordinate(1,2), "im"), s8 = new Syllable(new Coordinate(1,3), "i"), s9 = new Syllable(new Coordinate(2,0), "i"), s10 = new Syllable(new Coordinate(2,1), "late"), s11 = new Syllable(new Coordinate(2,2), "mac"), s12 = new Syllable(new Coordinate(2,3), "un"), s13 = new Syllable(new Coordinate(3,0), "u"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "af"), s16 = new Syllable(new Coordinate(3,3), "wa");
-  var allSyllables:Array<Syllable> = [];
-  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
-
-  var allParentWords:Array<Array<string>> = [];
-  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
-
-  //test puzzle
-  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
-  m.puzzle = pz
-  m.puzzle.syllables = allSyllables;
   
-
+  //test puzzle
+  let pz = createPuzzle()
+  m.puzzle = pz
+  m.puzzle.syllables = pz.allSyllables;
 
   //commence a swap between syllables[0] and [1]
   let syllable3 = pz.allSyllables[0];
@@ -276,22 +229,11 @@ test('chooseConfiguration', () => {
 
 test('victory', () => {
   let m = new Model(configuration1)
-  let numRows = 4;
-  let numColumns = 4;
-  let selected = [];
-  let previousMoves = [];
-
-  let s1 = new Syllable(new Coordinate(0,0), "un"), s2 = new Syllable(new Coordinate(0,1), "der"), s3 = new Syllable(new Coordinate(0,2), "wa"), s4 = new Syllable(new Coordinate(0,3), "i"), s5 = new Syllable(new Coordinate(1,0), "af"), s6 = new Syllable(new Coordinate(1,1), "fil"), s7 = new Syllable(new Coordinate(1,2), "i"), s8 = new Syllable(new Coordinate(1,3), "ate"), s9 = new Syllable(new Coordinate(2,0), "im"), s10 = new Syllable(new Coordinate(2,1), "mac"), s11 = new Syllable(new Coordinate(2,2), "u"), s12 = new Syllable(new Coordinate(2,3), "late"), s13 = new Syllable(new Coordinate(3,0), "in"), s14 = new Syllable(new Coordinate(3,1), "vis"), s15 = new Syllable(new Coordinate(3,2), "ter"), s16 = new Syllable(new Coordinate(3,3), "ble");
-  var allSyllables:Array<Syllable> = [];
-  allSyllables.push(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16)
-
-  var allParentWords:Array<Array<string>> = [];
-  allParentWords.push(["in","vis","i","ble"],["im","mac","u","late"],["af","fil","i","ate"],["un","der","wa","ter"])
-
+ 
   //test puzzle
-  let pz = new Puzzle(numRows, numColumns, allSyllables, selected, previousMoves, allParentWords);
+  let pz = createPuzzle()
   m.puzzle = pz
-  m.puzzle.syllables = allSyllables;
+  m.puzzle.syllables = pz.allSyllables;
   
 
   //update score before swap
@@ -309,6 +251,12 @@ test('victory', () => {
 })
 
 
-test('page.tsx home', () => {
-  Home()
-})
+// test('Home', async () => {
+//   const { getByText } = render(<Home />)
+
+
+//   // const movesElement = getByText(/Number of Moves: 0/i);
+
+//   // expect(movesElement === undefined).toBe(false)
+//   // cleanup()
+// })
