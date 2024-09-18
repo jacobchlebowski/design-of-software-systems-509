@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 import { Coordinate, Syllable, Puzzle, Model } from './model.ts'
 import { configuration1, configuration2, configuration3 } from './puzzle.ts'
-import Home from './app/page.tsx'
+import Home, { selectOrDeselectSyllable, swapSyllable, undoSwap } from './app/page.tsx'
 import React from 'react'
 
 
@@ -251,12 +251,17 @@ test('victory', () => {
 })
 
 
-// test('Home', async () => {
-//   const { getByText } = render(<Home />)
+test('page.tsx swapSyllable', () => {
+  let m = new Model(configuration1)
+  expect(swapSyllable(m))
+})
 
+test('page.tsx undoSwap', () => {
+  let m = new Model(configuration1)
+  expect(undoSwap(m))
+})
 
-//   // const movesElement = getByText(/Number of Moves: 0/i);
-
-//   // expect(movesElement === undefined).toBe(false)
-//   // cleanup()
+// test('page.tsx Home', () => {
+//   // let m = new Model(configuration1)
+//   Home()
 // })
