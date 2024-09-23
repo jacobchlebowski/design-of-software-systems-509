@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import Home, { selectOrDeselectSyllable, swapSyllable, undoSwap } from './app/page.tsx'
+import Home from './app/page.tsx'
 import React from 'react'
 import { render, fireEvent, cleanup } from '@testing-library/react'
 
