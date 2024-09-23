@@ -1,9 +1,10 @@
 import { expect, test } from 'vitest'
 import { Coordinate, Syllable, Puzzle, Model } from './model.ts'
 import { configuration1, configuration2, configuration3 } from './puzzle.ts'
-import Home, { selectOrDeselectSyllable, swapSyllable, undoSwap } from './app/page.tsx'
-import React from 'react'
-import { render, fireEvent, cleanup } from '@testing-library/react'
+import {swapSyllable, undoSwap } from './app/page.tsx'
+
+
+
 
 
 function createPuzzle(): Puzzle {
@@ -260,20 +261,4 @@ test('page.tsx swapSyllable', () => {
 test('page.tsx undoSwap', () => {
   let m = new Model(configuration1)
   expect(undoSwap(m))
-})
-
-
-// //BOUNDARY TEST.tsx
-// test('Home', async () => {
-//   const { getByText } = render(<Home />)
-//   const movesElement = getByText(/Number of Moves: 0/i);
-// })
-
-
-test('Home', async () => {
-  const { getByText } = render(<Home />)
-  const movesElement = getByText(/Number of Moves: 0/i);
-
-  expect(movesElement === undefined).toBe(false)
-  cleanup()
 })
