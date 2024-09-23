@@ -3,6 +3,7 @@ import { Coordinate, Syllable, Puzzle, Model } from './model.ts'
 import { configuration1, configuration2, configuration3 } from './puzzle.ts'
 import Home, { selectOrDeselectSyllable, swapSyllable, undoSwap } from './app/page.tsx'
 import React from 'react'
+import { render, fireEvent, cleanup } from '@testing-library/react'
 
 
 function createPuzzle(): Puzzle {
@@ -261,7 +262,5 @@ test('page.tsx undoSwap', () => {
   expect(undoSwap(m))
 })
 
-// test('page.tsx Home', () => {
-//   // let m = new Model(configuration1)
-//   Home()
-// })
+
+//test

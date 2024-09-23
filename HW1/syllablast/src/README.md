@@ -32,6 +32,11 @@ npm run test
 npm run test -- --run --reporter verbose --coverage
 ```
 
+*If it fails to test, you may have to install canvas:
+```bash
+npm install canvas
+```
+
 
 #### Extra info
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
