@@ -263,4 +263,17 @@ test('page.tsx undoSwap', () => {
 })
 
 
-//test
+// //BOUNDARY TEST.tsx
+// test('Home', async () => {
+//   const { getByText } = render(<Home />)
+//   const movesElement = getByText(/Number of Moves: 0/i);
+// })
+
+
+test('Home', async () => {
+  const { getByText } = render(<Home />)
+  const movesElement = getByText(/Number of Moves: 0/i);
+
+  expect(movesElement === undefined).toBe(false)
+  cleanup()
+})
