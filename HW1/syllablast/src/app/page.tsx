@@ -133,12 +133,12 @@ export default function Home() {
         {model.victory && (<label className="congratulationsMessage">{"CONGRATULATIONS"}</label>)}
 
         <div className="buttons">
-        <button className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable() || model.victory}>Swap</button>
-          <button className="button resetbutton" onClick={handleReset} disabled={!model.resetAvailable()}>Reset</button>
-          <button className="button undobutton" onClick={handleUndoSwap} disabled={!model.undoAvailable() || model.victory}>Undo</button>
-          <button className="button configuration1button" onClick={handleConfigurationChange}>Configuration1</button>
-          <button className="button configuration2button" onClick={handleConfigurationChange}>Configuration2</button>
-          <button className="button configuration3button" onClick={handleConfigurationChange}>Configuration3</button>
+        <button data-testid="swapbutton" className="button swapbutton" onClick={handleSwap} disabled={!model.swapAvailable() || model.victory}>Swap</button>
+          <button data-testid="resetbutton" className="button resetbutton" onClick={handleReset} disabled={!model.resetAvailable()}>Reset</button>
+          <button data-testid="undobutton" className="button undobutton" onClick={handleUndoSwap} disabled={!model.undoAvailable() || model.victory}>Undo</button>
+          <button data-testid="configuration1button" className="button configuration1button" onClick={handleConfigurationChange}>Configuration1</button>
+          <button data-testid="configuration2button" className="button configuration2button" onClick={handleConfigurationChange}>Configuration2</button>
+          <button data-testid="configuration3button" className="button configuration3button" onClick={handleConfigurationChange}>Configuration3</button>
         </div>
 
       </main>
