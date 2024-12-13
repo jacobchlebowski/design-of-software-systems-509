@@ -1,5 +1,0 @@
-DB Instance Identifier: team-rust-DB
-Master Username: rustAdmin
-Master Password: rustPass!
-Endpoint/Hostname: team-rust-db.cxwuk42c82ds.us-east-2.rds.amazonaws.com
-Port: 3306
