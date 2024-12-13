@@ -1,0 +1,6 @@
+{
+    "host"     : "team-rust-db.cxwuk42c82ds.us-east-2.rds.amazonaws.com",
+    "user"     : "rustAdmin",
+    "password" : "rustPass!",
+    "database" : "teamRust"
+}

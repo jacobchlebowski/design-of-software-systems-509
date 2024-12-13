@@ -1,0 +1,13 @@
+{
+    "name": "reviewactivebidsbuyer",
+    "version": "1.0.0",
+    "description": "reviews buyers active bids",
+    "main": "index.mjs",
+    "repository": "TBA",
+    "author": "SAM CLI",
+    "license": "MIT",
+    "type" : "commonjs",
+    "dependencies": {
+      "mysql": "^2.18.1"
+    }
+  }

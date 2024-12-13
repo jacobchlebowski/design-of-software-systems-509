@@ -1,0 +1,1232 @@
+commit 11bd2000303bdab8826596ea5cb8607ac1a85d31
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 6 19:17:16 2024 -0500
+
+    added aws links
+
+ auction-house-site/src/pages/buyer-page.tsx  |  3 ++-
+ auction-house-site/src/pages/login-page.tsx  | 10 ++++++----
+ auction-house-site/src/pages/reg-page.tsx    |  3 ++-
+ auction-house-site/src/pages/seller-page.tsx | 22 ++++++++++++++++++----
+ 4 files changed, 28 insertions(+), 10 deletions(-)
+
+commit 626debde7d9197c6b8a0fc8249dc6bfd81d87191
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 6 18:54:43 2024 -0500
+
+    login page and buyer page username display
+
+ auction-house-site/src/pages/buyer-page.tsx | 18 ++++++++++++++----
+ auction-house-site/src/pages/login-page.tsx | 13 ++++++++++---
+ 2 files changed, 24 insertions(+), 7 deletions(-)
+
+commit e244ea0bd77ab30f96be07c36ba623adffa6e503
+Merge: a67583e 2903753
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Nov 6 23:03:03 2024 +0000
+
+    Merge branch 'patch-login' into 'main'
+    
+    Update login-page.tsx
+    
+    See merge request jachlebowski/rust-auction-house!30
+
+commit 290375375aac9bb2a07a0e46d02717dbecd43690
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Wed Nov 6 22:40:28 2024 +0000
+
+    Update login-page.tsx
+
+ auction-house-site/src/pages/login-page.tsx | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+commit a67583e5e90cd4dd1d70c532927103e0fcdebdb9
+Merge: 68f1703 ccf3f0f
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Nov 5 02:08:43 2024 +0000
+
+    Merge branch 'createAccountEdits' into 'main'
+    
+    register done
+    
+    See merge request jachlebowski/rust-auction-house!29
+
+commit ccf3f0f836843eedbab8a2ad7ac6cb7426600ff4
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Mon Nov 4 21:07:49 2024 -0500
+
+    register done
+
+ auction-house-site/package-lock.json                                    | 106 +++---
+ auction-house-site/package.json                                         |   8 +-
+ auction-house-site/src/pages/reg-page.css                               |  13 +
+ auction-house-site/src/pages/reg-page.tsx                               | 110 ++++--
+ auction-house-site/tsconfig.json                                        |  24 +-
+ aws-auction-backend/{createAccountSeller => createAccount}/config.json  |   0
+ aws-auction-backend/{createAccountSeller => createAccount}/index.mjs    |  59 ++-
+ aws-auction-backend/{createAccountSeller => createAccount}/package.json |   0
+ aws-auction-backend/openAccountBuyer/index.mjs                          |   2 +-
+ package-lock.json                                                       | 840 ++++++++++++++++++++++++++++++++++++++++++-
+ package.json                                                            |   3 +-
+ 11 files changed, 1044 insertions(+), 121 deletions(-)
+
+commit 68f1703c2b94cd8bee3d79142547320ccfabb90f
+Merge: 5683a52 8ad52af
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Nov 4 23:35:59 2024 +0000
+
+    Merge branch 'openAccountBuyer' into 'main'
+    
+    Create Buyer and Seller Account
+    
+    See merge request jachlebowski/rust-auction-house!27
+
+commit 8ad52af78f20030d00b87465e47a8395c45e7254
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Mon Nov 4 18:31:54 2024 -0500
+
+    Create Buyer and Seller Account
+
+ aws-auction-backend/createAccountSeller/config.json  |  6 +++++
+ aws-auction-backend/createAccountSeller/index.mjs    | 92 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ aws-auction-backend/createAccountSeller/package.json | 13 +++++++++
+ aws-auction-backend/openAccountBuyer/config.json     |  6 +++++
+ aws-auction-backend/openAccountBuyer/index.mjs       | 92 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ aws-auction-backend/openAccountBuyer/package.json    | 13 +++++++++
+ 6 files changed, 222 insertions(+)
+
+commit 5683a5277d53aa6ad275fe645ca0c607828db88d
+Merge: abbb6fe e4a06f2
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Nov 4 22:57:58 2024 +0000
+
+    Merge branch 'giorgio-loginSeller' into 'main'
+    
+    Giorgio login seller and buyer
+    
+    See merge request jachlebowski/rust-auction-house!25
+
+commit e4a06f24bbff920427d595cde149e512c142f03e
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:34:18 2024 +0000
+
+    Upload New File
+
+ aws-auction-backend/loginBuyer/config.json | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit cd636163dbde5a823a6a52482d5163f964eb971f
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:33:53 2024 +0000
+
+    Update package.json
+
+ aws-auction-backend/loginBuyer/package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 539cff9a2b30ea7a41048f3b20184cd7c7b5895a
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:33:34 2024 +0000
+
+    Upload New File
+
+ aws-auction-backend/loginBuyer/package.json | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit 6fe768dd4c21be23fd1458bb1df59a945d7193d8
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:33:10 2024 +0000
+
+    Update index.mjs
+
+ aws-auction-backend/loginBuyer/index.mjs | 94 +++++++++++++++++++++++++++++++++++++--------------------------------------
+ 1 file changed, 47 insertions(+), 47 deletions(-)
+
+commit 853d93811aef6b2d631529278a5b151f6e9d1291
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:31:42 2024 +0000
+
+    Upload New File
+
+ aws-auction-backend/loginBuyer/index.mjs | 69 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 69 insertions(+)
+
+commit c97f0f5e7a81156197bf1134b9f715d4dcbdbefb
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:14:34 2024 +0000
+
+    Update index.mjs
+
+ aws-auction-backend/loginSeller/index.mjs | 94 +++++++++++++++++++++++++++++++++++++-------------------------------------
+ 1 file changed, 47 insertions(+), 47 deletions(-)
+
+commit 2889fafe220dd560a3c473cc77d1974b20d190b2
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:13:31 2024 +0000
+
+    Upload New File
+
+ aws-auction-backend/loginSeller/index.mjs | 69 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 69 insertions(+)
+
+commit 01f269ff69c224b38273d2a50b6fcfa98ab72cf6
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:13:16 2024 +0000
+
+    Upload New File
+
+ aws-auction-backend/loginSeller/config.json | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 3ad85bb4cb02a3bf83de100d5e7f013b2ccc6c11
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:12:58 2024 +0000
+
+    Upload New File
+
+ aws-auction-backend/loginSeller/package.json | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit 754d65a9d447219ffd092373a152aefa07364f49
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:10:35 2024 +0000
+
+    Add new directory
+
+ aws-auction-backend/loginBuyer/.gitkeep | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bef087f27471b22737db690da087eea0b932a07b
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:10:15 2024 +0000
+
+    Add new directory
+
+ aws-auction-backend/loginSeller/.gitkeep | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit cfbd2989ee397bf3739f26a9b9c4d777a5bcdbb3
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:09:37 2024 +0000
+
+    Added loginSeller to login-page.tsx
+
+ auction-house-site/src/pages/login-page.tsx | 34 ++++++++++++++++++++++++++++------
+ 1 file changed, 28 insertions(+), 6 deletions(-)
+
+commit abbb6feabaf2f172a2e1f59286733fa936f572a5
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 15:29:08 2024 -0400
+
+    wrapping up first 6 use cases
+
+ auction-house-site/package-lock.json         |  2 +-
+ auction-house-site/package.json              |  2 +-
+ auction-house-site/src/pages/seller-page.tsx | 38 +++++++++++++++++++++++++++++++-------
+ 3 files changed, 33 insertions(+), 9 deletions(-)
+
+commit 6d6d9145297ddc16864c1e34ea6b376335967af7
+Merge: c804f99 236b407
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Fri Nov 1 19:21:40 2024 +0000
+
+    Merge branch 'zihumphrey/review-items3' into 'main'
+    
+    finishing up work for front-end reviewItems
+    
+    See merge request jachlebowski/rust-auction-house!24
+
+commit 236b407444057f3927c2106b6deaa04ca7aea341
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 15:13:38 2024 -0400
+
+    finishing up work for front-end reviewItems
+
+ auction-house-site/src/pages/seller-page.css | 56 +++++++++++++++++++-------------------------------------
+ auction-house-site/src/pages/seller-page.tsx | 54 +++++++-----------------------------------------------
+ 2 files changed, 26 insertions(+), 84 deletions(-)
+
+commit c804f99efbcdda029d32e6870c928495e7a30969
+Merge: 2b96878 a4da60a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 18:56:15 2024 +0000
+
+    Merge branch 'jachlebowski/edit-item-seller' into 'main'
+    
+    Jachlebowski/edit item seller
+    
+    See merge request jachlebowski/rust-auction-house!23
+
+commit a4da60a35a96d9e347800eebcc21a8da7887bd19
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 1 14:38:31 2024 -0400
+
+    backend edit item seller
+
+ aws-auction-backend/editItemSeller/config.json  |  6 +++++
+ aws-auction-backend/editItemSeller/index.mjs    | 88 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ aws-auction-backend/editItemSeller/package.json | 13 ++++++++++
+ 3 files changed, 107 insertions(+)
+
+commit ca887aaf19691bebdb93df12b276971824eb1baa
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 1 14:01:56 2024 -0400
+
+    wip
+
+ auction-house-site/src/pages/seller-page.tsx | 30 +++++++++++++++++++++++++++---
+ 1 file changed, 27 insertions(+), 3 deletions(-)
+
+commit 27e57eb42d933d68648f9f041e5a62aef1773ef8
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 1 13:27:46 2024 -0400
+
+    cleanup for add item and remove item
+
+ auction-house-site/src/pages/seller-page.tsx | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 2b9687804f88eb9b1b8cd7eeb2d6c1bcc18647ff
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:47:40 2024 -0400
+
+    quick fix
+
+ auction-house-site/src/pages/seller-page.tsx | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+commit 4ba7f540ffa76910d8765d00498da5f48ce389e5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:45:10 2024 -0400
+
+    quick front end fixes
+
+ auction-house-site/src/pages/seller-page.tsx | 26 ++++----------------------
+ 1 file changed, 4 insertions(+), 22 deletions(-)
+
+commit 7485b62bc0fe1d6fa6a2763d7a8da97b42038556
+Merge: 4615d4c ad2dfcd
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 00:29:40 2024 +0000
+
+    Merge branch 'jachlebowski/remove-inactive-item-seller' into 'main'
+    
+    Jachlebowski/remove inactive item seller
+    
+    See merge request jachlebowski/rust-auction-house!22
+
+commit ad2dfcde40bbbfe7c85fe4cac43f592836d44978
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:25:56 2024 -0400
+
+    call review items after add or remove inactive item seller
+
+ auction-house-site/src/pages/seller-page.tsx | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 5972ce25e05ae33b01e54d9d9b18c52a93f636ea
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:13:40 2024 -0400
+
+    call review items after remove item?
+
+ auction-house-site/src/pages/seller-page.tsx | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 974e0dbe9267334117f4b3845257ec5bec997661
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:11:14 2024 -0400
+
+    backend remove inactive item seller
+
+ aws-auction-backend/removeInactiveItemSeller/config.json  |  6 ++++
+ aws-auction-backend/removeInactiveItemSeller/index.mjs    | 87 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ aws-auction-backend/removeInactiveItemSeller/package.json | 13 +++++++++
+ 3 files changed, 106 insertions(+)
+
+commit 99b7b94d596a29bdb75095578d9e69026cf0a9b9
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:06:00 2024 -0400
+
+    front end remove inactive item seller
+
+ auction-house-site/src/pages/seller-page.tsx | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+
+commit 41ddff7d201b5640e0fec93be5e2a270c304717a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:02:34 2024 -0400
+
+    had to go back and fix add item
+
+ aws-auction-backend/addItemSeller/index.mjs | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 4615d4c3a3ba906f8be76a81c700715647c84339
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 19:46:11 2024 -0400
+
+    small addition
+
+ auction-house-site/src/pages/seller-page.tsx | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 3de48fc8a2ab7a4eafdf0790e34274d39c5f764e
+Merge: 72804a9 ff419ba
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 31 23:43:49 2024 +0000
+
+    Merge branch 'zihumphrey/review-items2' into 'main'
+    
+    review item progress
+    
+    See merge request jachlebowski/rust-auction-house!21
+
+commit ff419ba30fad915dcdedc9cfe75090048f6bfe5c
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 19:41:47 2024 -0400
+
+    review item progress
+
+ auction-house-site/src/pages/buyer-page.tsx  |  15 ++---
+ auction-house-site/src/pages/seller-page.css | 154 +++++++++++++++++++-------------------------
+ auction-house-site/src/pages/seller-page.tsx | 246 ++++++++++++++++++++++++++++++++++------------------------------------
+ 3 files changed, 193 insertions(+), 222 deletions(-)
+
+commit 72804a9e977957ca82f707565dbd34266bd7c045
+Merge: e06b463 a66f47b
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 31 22:08:48 2024 +0000
+
+    Merge branch 'zihumphrey/close-account2' into 'main'
+    
+    finished frontend for close account functions
+    
+    See merge request jachlebowski/rust-auction-house!20
+
+commit a66f47be35cb170d82d82ce7d102d37e79f14575
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 18:07:56 2024 -0400
+
+    finished frontend for close account functions
+
+ auction-house-site/src/pages/buyer-page.tsx  | 15 +++++++--------
+ auction-house-site/src/pages/seller-page.tsx |  2 +-
+ 2 files changed, 8 insertions(+), 9 deletions(-)
+
+commit e06b46349c09b49b029f66400cd956c41d0d586d
+Merge: def81d2 c4dd5ee
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 31 18:14:18 2024 +0000
+
+    Merge branch 'zihumphrey/reviewItems' into 'main'
+    
+    backend reviewItems seller
+    
+    See merge request jachlebowski/rust-auction-house!19
+
+commit c4dd5ee53aa6c6d5e9c13963fee14038f4f2edc6
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 14:08:58 2024 -0400
+
+    backend reviewItems seller
+
+ auction-house-site/src/pages/seller-page.css | 10 ++++++++--
+ auction-house-site/src/pages/seller-page.tsx | 17 +++++++++-------
+ aws-auction-backend/reviewItems/config.json  |  6 ++++++
+ aws-auction-backend/reviewItems/index.mjs    | 77 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ aws-auction-backend/reviewItems/package.json | 13 ++++++++++++
+ 5 files changed, 114 insertions(+), 9 deletions(-)
+
+commit def81d2933afe8a70cbb6a60ca1baf9fdbfeb390
+Merge: 6ef1ce2 2c75c4f
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 17:48:21 2024 +0000
+
+    Merge branch 'jachlebowski/add-item-seller1' into 'main'
+    
+    Jachlebowski/add item seller1
+    
+    See merge request jachlebowski/rust-auction-house!17
+
+commit 2c75c4f8315402786874a4e809db796d35f8be1a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:28:59 2024 -0400
+
+    backend seller add item
+
+ aws-auction-backend/addItemSeller/index.mjs | 20 ++++++++++++++------
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+
+commit d4facc129df9d9876f19525f4730dad82f45950e
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:28:50 2024 -0400
+
+    frontEnd seller add item
+
+ auction-house-site/src/pages/seller-page.tsx | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 387e9646f4b36ad9c41265306952047f11b141f4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:00:28 2024 -0400
+
+    wip: add item seller back end
+
+ aws-auction-backend/addItemSeller/config.json  |  6 +++++
+ aws-auction-backend/addItemSeller/index.mjs    | 87 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ aws-auction-backend/addItemSeller/package.json | 13 +++++++++++
+ 3 files changed, 106 insertions(+)
+
+commit c279a9f67732fbdff1ab1ce662459b23c83a8075
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:00:14 2024 -0400
+
+    front end seller add item
+
+ auction-house-site/src/pages/seller-page.tsx | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+commit 6ef1ce28126c5bbc18f26831ed745beeae711898
+Merge: e132ddb 136f0a7
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Oct 30 20:16:06 2024 +0000
+
+    Merge branch 'zihumphrey/backend-closeAccountSeller' into 'main'
+    
+    added close account buyer and seller
+    
+    See merge request jachlebowski/rust-auction-house!16
+
+commit 136f0a7c70b682c9cdd33e14cdde1103f25e9b91
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Wed Oct 30 16:14:13 2024 -0400
+
+    added close account buyer and seller
+
+ aws-auction-backend/closeAccountBuyer/config.json                        |  6 +++
+ aws-auction-backend/closeAccountBuyer/index.mjs                          | 87 +++++++++++++++++++++++++++++++++++++++++++
+ aws-auction-backend/closeAccountBuyer/package.json                       | 13 +++++++
+ aws-auction-backend/closeAccountSeller/config.json                       |  6 +++
+ aws-auction-backend/{closeAccountSeller => closeAccountSeller/index.mjs} | 51 ++++++++-----------------
+ aws-auction-backend/closeAccountSeller/package.json                      | 13 +++++++
+ 6 files changed, 140 insertions(+), 36 deletions(-)
+
+commit e132ddb9c85468dbc4db88205fb8f82dda5a10e5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 16:07:47 2024 -0400
+
+    fix npm run build
+
+ auction-house-site/next.config.mjs | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
+
+commit a0dd7e176536ea5a68a6e0c2512aed4ffddf609d
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Wed Oct 30 15:50:35 2024 -0400
+
+    please AWS s3 work now
+
+ auction-house-site/src/pages/seller-page.tsx |  31 +++++++++-----------
+ aws-auction-backend/closeAccountSeller       | 108 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 121 insertions(+), 18 deletions(-)
+
+commit ad1acf41526b3fd825081001601285b43404f730
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:15:52 2024 -0400
+
+    close Seller and buyer merged with add items (wip)
+
+ auction-house-site/src/pages/buyer-page.tsx | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 9c1471e02c77f0c06a4c3e6ce40317e450aa5b1a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:12:56 2024 -0400
+
+    wip
+
+ auction-house-site/src/pages/seller-page.tsx | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+commit 368998e7118f996f5e2e6ef4bdb293fb48a99ef7
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:12:12 2024 -0400
+
+    wip
+
+ auction-house-site/src/pages/buyer-page.tsx  |  4 ++--
+ auction-house-site/src/pages/seller-page.tsx | 67 ++-----------------------------------------------------------------
+ 2 files changed, 4 insertions(+), 67 deletions(-)
+
+commit cdc72e233416142319fe3ea4461e85c0d529c7d3
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:06:01 2024 -0400
+
+    baseURL
+
+ auction-house-site/src/pages/seller-page.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f37a60dcb1bc46d6ccd74e4a76590fd0a4f3acd4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 13:50:09 2024 -0400
+
+    .gitignore
+
+ auction-house-site/.gitignore | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 7b213c63e5857758ed2db04b64641b8939c30c89
+Merge: 7c92344 88046d3
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Wed Oct 30 17:48:21 2024 +0000
+
+    Merge branch 'jachlebowski/add-item-seller' into 'main'
+    
+    Jachlebowski/add item seller
+    
+    See merge request jachlebowski/rust-auction-house!15
+
+commit 88046d35b8e0e73d1fa3538b3cf43997595a83e8
+Merge: e6465ba 7c92344
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Oct 30 17:47:45 2024 +0000
+
+    Merge branch 'main' into 'jachlebowski/add-item-seller'
+    
+    # Conflicts:
+    #   auction-house-site/src/pages/seller-page.tsx
+    #   package-lock.json
+    #   package.json
+
+commit e6465ba35aff4acb412ea1962bb6295aa3b8c142
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 12:57:41 2024 -0400
+
+    installed axios, mysql, mysql2 and seller page wip
+
+ auction-house-site/package-lock.json         | 286 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ auction-house-site/package.json              |   3 +
+ auction-house-site/src/pages/seller-page.tsx |   7 +-
+ package-lock.json                            | 201 ++++++++++++++++++++++++++++++++++++++++++++++++-
+ package.json                                 |   4 +-
+ 5 files changed, 494 insertions(+), 7 deletions(-)
+
+commit 19beec77527e4ae24c522d1752208edcc5cf0b3c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 15:29:42 2024 -0400
+
+    axios dependencies
+
+ package-lock.json | 102 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ package.json      |   5 +++++
+ 2 files changed, 107 insertions(+)
+
+commit 7c92344da1cc5e33ae0b87a31f90d758b4442247
+Merge: 70f0a4c 73c8cd1
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 19:21:33 2024 +0000
+
+    Merge branch 'zihumphrey/review-items' into 'main'
+    
+    started front-end for review items lambda function and fixed /POST for close...
+    
+    See merge request jachlebowski/rust-auction-house!14
+
+commit 73c8cd144640d84edbd957367a41b24f82226f55
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 15:20:16 2024 -0400
+
+    started front-end for review items lambda function and fixed /POST for close accounts on buyer & seller
+
+ auction-house-site/src/pages/buyer-page.tsx  |  2 +-
+ auction-house-site/src/pages/seller-page.tsx | 29 ++++++++++++++++++++++++++++-
+ 2 files changed, 29 insertions(+), 2 deletions(-)
+
+commit 70f0a4c8a4d05ea0f7e62c0259675f12bc224814
+Merge: 4e5a5e4 c6a154a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 19:14:13 2024 +0000
+
+    Merge branch 'zihumphrey/close-account' into 'main'
+    
+    added frontend functionality for closing accounts
+    
+    See merge request jachlebowski/rust-auction-house!13
+
+commit c6a154a57931db2be69a3d4c7e3ce50947e79d8b
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 15:06:15 2024 -0400
+
+    added frontend functionality for closing accounts
+
+ auction-house-site/src/pages/buyer-page.tsx  |  59 +++++++++++----
+ auction-house-site/src/pages/seller-page.tsx | 276 +++++++++++++++++++++++++++++++++++++++-------------------------------
+ package-lock.json                            | 102 ++++++++++++++++++++++++++
+ package.json                                 |   5 ++
+ 4 files changed, 304 insertions(+), 138 deletions(-)
+
+commit 6460ef19e83f7e2a5c5620a13b58416dbd719d50
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:37:42 2024 -0400
+
+    grabs all fields for add item
+
+ auction-house-site/src/pages/seller-page.tsx | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+commit 6b818da4f9f7ae7442aa34af75ac8916c1487a9c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:28:37 2024 -0400
+
+    wip seller add item
+
+ auction-house-site/src/pages/seller-page.tsx | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+commit d6c64440196aeeec8028366a4c6957d37758961f
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:10:38 2024 -0400
+
+    edit item form added item id field
+
+ auction-house-site/src/pages/seller-page.tsx | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 72ffb7acb0a096f393e707be41388a1fa3a58bf1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:04:49 2024 -0400
+
+    login page default page
+
+ auction-house-site/next.config.mjs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4e5a5e4eac783e37756838a4d624243f55d70eb9
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 28 18:28:11 2024 -0400
+
+    admin page css
+
+ auction-house-site/src/pages/admin-page.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b2667569b857808238c16679ec1b1234f6aca17e
+Merge: dab6cde 49dc721
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 28 22:25:57 2024 +0000
+
+    Merge branch 'giorgio-pages' into 'main'
+    
+    Admin page
+    
+    See merge request jachlebowski/rust-auction-house!12
+
+commit 49dc72140e3fae7eec9e21dfcf759ff2a3f77e9e
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:45 2024 +0000
+
+    Upload New File
+
+ auction-house-site/src/pages/admin-page.css | 84 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 84 insertions(+)
+
+commit e1ed732a68bbab2780ac809b6783479bab2fcad5
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:33 2024 +0000
+
+    Upload New File
+
+ auction-house-site/src/pages/admin-page.tsx | 95 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 95 insertions(+)
+
+commit 04a98cb98b6e6a939a2e4acc6ef750a9644a2e2d
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:12 2024 +0000
+
+    Delete admin-page.tsx
+
+ admin-page.tsx | 95 -----------------------------------------------------------------------------------------------
+ 1 file changed, 95 deletions(-)
+
+commit 16e6599ba7d440d7558d8f4ad4dc6a20cad8fbcc
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:05 2024 +0000
+
+    Delete admin-page.css
+
+ admin-page.css | 84 ------------------------------------------------------------------------------------
+ 1 file changed, 84 deletions(-)
+
+commit fd651e98a6ac07dac9a066ed335437fdb905c192
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:06:29 2024 +0000
+
+    Upload New File
+
+ admin-page.css | 84 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 84 insertions(+)
+
+commit 17c9ef3e2a0f72e6d5f68b43f28bbb771bdf759b
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:05:44 2024 +0000
+
+    Update admin-page.tsx
+
+ admin-page.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1041b7004e250412f2a9fa37928969c518544d71
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:05:05 2024 +0000
+
+    Upload New File
+
+ admin-page.tsx | 95 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 95 insertions(+)
+
+commit dab6cdeb3fd7acd4b037a646fc380612f80281cf
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 24 14:45:41 2024 -0400
+
+    changed main page to register page
+
+ auction-house-site/next.config.mjs | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 4b6eb18305382b05ff504db76405aa3e08acf58a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 24 14:45:06 2024 -0400
+
+    removed front end folder
+
+ auction-frontend/.gitkeep          | 0
+ auction-house-site/next.config.mjs | 2 +-
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+commit 59e5d8e1c745b4c6875a1e01099efa7828d1d6f7
+Merge: de04cfb 8fe58bc
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 24 18:43:16 2024 +0000
+
+    Merge branch 'giorgio-pages' into 'main'
+    
+    Giorgio reg page
+    
+    See merge request jachlebowski/rust-auction-house!11
+
+commit 8fe58bccdc21b314cf41f8c3efbfe29bd5aabfa6
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:38:32 2024 +0000
+
+    Upload New File
+
+ auction-house-site/src/pages/reg-page.css | 84 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 84 insertions(+)
+
+commit 9c57195604393b74829adf0cb967805529117831
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:38:02 2024 +0000
+
+    Upload New File
+
+ auction-house-site/src/pages/reg-page.tsx | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit 7a76563e3130c9bacf69d78a297cdfa3469d6088
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:37:11 2024 +0000
+
+    Delete reg-page.css
+
+ auction-house-site/src/pages/reg-page.css | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit cb6dca07dda73e24f98ec0f3f0d5c3bf112a1a5c
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:36:58 2024 +0000
+
+    Upload New File
+
+ auction-house-site/src/pages/reg-page.css | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit de04cfb2a742d1f438a68ae23c9e103d48edea65
+Merge: 665a147 9aea6c4
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Oct 21 22:47:16 2024 +0000
+
+    Merge branch 'jachlebowski/seller-page2' into 'main'
+    
+    Jachlebowski/seller page2
+    
+    See merge request jachlebowski/rust-auction-house!10
+
+commit 9aea6c4dda095a0556071cd93364c6800f263784
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 18:45:32 2024 -0400
+
+    seller page edited
+
+ auction-house-site/src/pages/seller-page.css | 23 ++++++++++++++++++-----
+ auction-house-site/src/pages/seller-page.tsx | 58 +++++++++++++++++++++++++++++++++++++++++++++-------------
+ 2 files changed, 63 insertions(+), 18 deletions(-)
+
+commit a3051f3d0b4f7ab46aaf6a95c6eabe04da892be5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 18:29:59 2024 -0400
+
+    itemID included in items for easier editing
+
+ auction-house-site/src/pages/seller-page.css | 4 ++++
+ auction-house-site/src/pages/seller-page.tsx | 3 ++-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+commit 942b5a7c1b66c5fa0a642a40d3ec57e102a1579b
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 18:26:54 2024 -0400
+
+    removed unncessary css functions
+
+ auction-house-site/src/pages/customer-page.css | 40 ----------------------------------------
+ 1 file changed, 40 deletions(-)
+
+commit 665a1473211bba1f02cd1218b7d77d2beab4d55d
+Merge: bf3d2b6 7de024b
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Oct 21 18:32:29 2024 +0000
+
+    Merge branch 'jachlebowski/customer-page' into 'main'
+    
+    Jachlebowski/customer page
+    
+    See merge request jachlebowski/rust-auction-house!9
+
+commit 7de024b901616452bb7ee9943015f49d54053a8d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:30:45 2024 -0400
+
+    customer page complete
+
+ auction-house-site/src/pages/customer-page.css | 80 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ auction-house-site/src/pages/customer-page.tsx | 43 +++++++++++++++++++++++--------------
+ 2 files changed, 106 insertions(+), 17 deletions(-)
+
+commit 9c43e5074da52b0b7fd9d88949c34f85eb990a2c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:17:33 2024 -0400
+
+    wip customer search
+
+ auction-house-site/src/pages/customer-page.css | 30 +++++++++++++++++++-----------
+ auction-house-site/src/pages/customer-page.tsx | 24 +++++++++---------------
+ 2 files changed, 28 insertions(+), 26 deletions(-)
+
+commit de30fd3714ba31625dacc70511492468914e014d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:06:33 2024 -0400
+
+    initial customer page
+
+ auction-house-site/src/pages/customer-page.css | 147 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ auction-house-site/src/pages/customer-page.tsx |  62 +++++++++++++++++++++++++++++
+ 2 files changed, 209 insertions(+)
+
+commit b24ca3038ea5cc4423d73b1d34560a5c41e7c3e5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:06:16 2024 -0400
+
+    fixed buyer page table
+
+ auction-house-site/src/pages/buyer-page.tsx | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+commit 6b5f36a5cb548023e0bf778ad09fcb92c9ec6959
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:56:09 2024 -0400
+
+    login page default screen
+
+ auction-house-site/next.config.mjs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c4abe84a66a9c9848558e18e0e9dc3f9dcf05ef1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:55:33 2024 -0400
+
+    removed comments
+
+ auction-house-site/src/pages/login-page.css  | 29 -----------------------------
+ auction-house-site/src/pages/seller-page.css | 28 ----------------------------
+ 2 files changed, 57 deletions(-)
+
+commit 94f7b88379086fa1cbc5af08d0ebc429a36ca1fb
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:55:19 2024 -0400
+
+    moved login page to pages folder
+
+ auction-frontend/login-page.css | 74 --------------------------------------------------------------------------
+ auction-frontend/login-page.tsx | 31 -------------------------------
+ 2 files changed, 105 deletions(-)
+
+commit bf3d2b63e529f7cf2c35f1d2c47c734702d5b26c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:51:05 2024 -0400
+
+    tracking
+
+ auction-house-site/src/pages/login-page.css | 74 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ auction-house-site/src/pages/login-page.tsx | 31 ++++++++++++++++++++++++++++++
+ 2 files changed, 105 insertions(+)
+
+commit 2cdd1d9a86262ebe5c53d736358b1373c301d7aa
+Merge: b495ab2 bb6526e
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 21 01:14:58 2024 +0000
+
+    Merge branch 'login-page' into 'main'
+    
+    created loginpage
+    
+    See merge request jachlebowski/rust-auction-house!7
+
+commit bb6526ea79290e7e7f741f8c4f0459a9361ccce3
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Fri Oct 18 21:48:45 2024 -0400
+
+    created loginpage
+
+ auction-frontend/login-page.css | 74 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ auction-frontend/login-page.tsx | 31 +++++++++++++++++++++++++++++++
+ 2 files changed, 105 insertions(+)
+
+commit b495ab2715f08e49815d0705f0738b9460da6715
+Merge: d9797c4 1ee551f
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Sat Oct 19 18:43:42 2024 +0000
+
+    Merge branch 'zihumphrey/buyer-page2' into 'main'
+    
+    finished starter buyer page and css
+    
+    See merge request jachlebowski/rust-auction-house!6
+
+commit 1ee551fb42ea51a1d4a13b79c24d275059a8daaa
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Sat Oct 19 14:42:57 2024 -0400
+
+    finished starter buyer page and css
+
+ auction-house-site/src/pages/buyer-page.css | 155 +++++++++++++++++++++++++++++++++++++++++++----------------------------
+ auction-house-site/src/pages/buyer-page.tsx | 101 ++++++++++++----------------------------------
+ 2 files changed, 120 insertions(+), 136 deletions(-)
+
+commit d9797c42bb21b32b4aef509f6da320c8ec193d6e
+Merge: 2d4985d 440af6a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Thu Oct 17 18:09:45 2024 +0000
+
+    Merge branch 'zihumphrey/buyer-page1' into 'main'
+    
+    started work on buyer page
+    
+    See merge request jachlebowski/rust-auction-house!5
+
+commit 440af6af927ede81ab7b63cf1befd29118b6be6f
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 17 14:07:04 2024 -0400
+
+    started work on buyer page
+
+ auction-house-site/src/pages/buyer-page.css | 114 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ auction-house-site/src/pages/buyer-page.tsx | 105 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 219 insertions(+)
+
+commit 2d4985dfacd32c25b7928527acdea947b4f5473e
+Merge: 71573b6 03b96bb
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Oct 16 23:12:37 2024 +0000
+
+    Merge branch 'jachlebowski/seller-page1' into 'main'
+    
+    Jachlebowski/seller page1
+    
+    See merge request jachlebowski/rust-auction-house!4
+
+commit 03b96bbda4ced539f126ff144828be62c34a4122
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 19:11:39 2024 -0400
+
+    added MIT license
+
+ LICENSE | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit ce06d121b3cb6b2e52905362d548004779bf6458
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 19:11:31 2024 -0400
+
+    updated readme
+
+ README.md | 145 +++++++++++++++++++++++++++++++++++++++++----------------------------------------------------------------
+ 1 file changed, 56 insertions(+), 89 deletions(-)
+
+commit 3af34d6ed448a12e21c302709958d5f5af887d7d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 18:52:16 2024 -0400
+
+    seller page front-end complete
+
+ auction-house-site/src/pages/seller-page.css | 40 ++++++++++++++++++++++++++------
+ auction-house-site/src/pages/seller-page.tsx | 89 ++++++++++++++++++++++++++++++++++++++---------------------------------
+ 2 files changed, 81 insertions(+), 48 deletions(-)
+
+commit b62165584ea650d9df6dc4b5472d4057495252d1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 18:07:48 2024 -0400
+
+    wip item card
+
+ auction-house-site/src/pages/seller-page.css | 38 +++++++++++++++++++++++++++++++++++++-
+ auction-house-site/src/pages/seller-page.tsx | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 83 insertions(+), 1 deletion(-)
+
+commit 418155f9b7af7703846942c461609f00fa6abc17
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 17:25:28 2024 -0400
+
+    seller username, add/edit item form, seller balance
+
+ auction-house-site/src/pages/seller-page.css | 70 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ auction-house-site/src/pages/seller-page.tsx | 68 ++++++++++++++++++++++++++++++++++++++++++++++----------------------
+ 2 files changed, 116 insertions(+), 22 deletions(-)
+
+commit 71573b68af9cfc26329881a636b5bde1da6485e8
+Merge: 15583c9 1e5c2ef
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Oct 15 17:53:14 2024 +0000
+
+    Merge branch 'jachlebowski/forwardPortTest' into 'main'
+    
+    fixed localhost connection, default page seller-page for now
+    
+    See merge request jachlebowski/rust-auction-house!3
+
+commit 1e5c2efcbb16af7790b8f78f5155666c9c5e74bc
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 13:51:29 2024 -0400
+
+    fixed localhost connection, default page seller-page for now
+
+ auction-house-site/next.config.mjs | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+commit 15583c9f1fb370e6dee641aff0ebca9c96f13854
+Merge: a9a2f77 4f29ee1
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Oct 15 17:13:21 2024 +0000
+
+    Merge branch 'jachlebowski/seller-page' into 'main'
+    
+    Jachlebowski/seller page
+    
+    See merge request jachlebowski/rust-auction-house!2
+
+commit 4f29ee1f717bb6a9062baadee5b6bcb7c6bf6d68
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 13:11:52 2024 -0400
+
+    wip seller page
+
+ auction-house-site/src/pages/seller-page.tsx | 25 ++++++++++---------------
+ 1 file changed, 10 insertions(+), 15 deletions(-)
+
+commit 02568c17248443c4e46d8b0056500385b8646e76
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 12:58:47 2024 -0400
+
+    wip: seller page
+
+ auction-house-site/src/pages/seller-page.tsx | 37 +++++++++++++++++++++++++++++--------
+ 1 file changed, 29 insertions(+), 8 deletions(-)
+
+commit 1a9c7044f78fd5cf429b2bf6f4c955de98c7a9e6
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 12:35:09 2024 -0400
+
+    added auction house site react project
+
+ auction-house-site/.eslintrc.json                 |    3 +
+ auction-house-site/.gitignore                     |   36 +
+ auction-house-site/README.md                      |   36 +
+ auction-house-site/next.config.mjs                |    4 +
+ auction-house-site/package-lock.json              | 4988 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ auction-house-site/package.json                   |   27 +
+ auction-house-site/postcss.config.mjs             |    8 +
+ auction-house-site/src/app/favicon.ico            |  Bin 0 -> 25931 bytes
+ auction-house-site/src/app/fonts/GeistMonoVF.woff |  Bin 0 -> 67864 bytes
+ auction-house-site/src/app/fonts/GeistVF.woff     |  Bin 0 -> 66268 bytes
+ auction-house-site/src/app/globals.css            |   27 +
+ auction-house-site/src/app/layout.tsx             |   35 +
+ auction-house-site/src/pages/seller-page.tsx      |   12 +
+ auction-house-site/tailwind.config.ts             |   19 +
+ auction-house-site/tsconfig.json                  |   26 +
+ 15 files changed, 5221 insertions(+)
+
+commit 5df14b82f74df62d8e6735ab9795e210bd7869ef
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 12:29:06 2024 -0400
+
+    ignore node_modules folder, can always be installed locally
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit a9a2f775c18166c5319f4a82d6df10139896af94
+Merge: df28a6c bf010d9
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:58:36 2024 +0000
+
+    Merge branch 'zaq' into 'main'
+    
+    readme change
+    
+    See merge request jachlebowski/rust-auction-house!1
+
+commit bf010d9a7abb09d756236945db72f33c1e4bdd90
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Mon Oct 14 18:50:18 2024 -0400
+
+    readme change
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit df28a6cc904c8526caffc8171fda1e81296f49dd
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:06:19 2024 +0000
+
+    frontend
+
+ auction-frontend/.gitkeep | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b1146745f10c5d35afeb01b0810a87400ca58207
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:05:46 2024 +0000
+
+    backend directory
+
+ aws-auction-backend/.gitkeep | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 015895834b3ffff9eee9ffd70058186896c0141f
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:02:15 2024 +0000
+
+    Initial commit
+
+ README.md | 93 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 93 insertions(+)

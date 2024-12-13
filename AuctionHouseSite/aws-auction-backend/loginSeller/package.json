@@ -1,0 +1,13 @@
+{
+    "name": "loginseller",
+    "version": "1.0.0",
+    "description": "logs in a seller",
+    "main": "index.mjs",
+    "repository": "TBA",
+    "author": "Matt",
+    "license": "MIT",
+    "type" : "commonjs",
+    "dependencies": {
+      "mysql": "^2.18.1"
+    }
+  }

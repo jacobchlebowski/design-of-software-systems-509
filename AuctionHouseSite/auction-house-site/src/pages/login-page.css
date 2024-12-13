@@ -1,0 +1,58 @@
+.loginButton{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.customerLoginButton{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #053811;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.registerButton{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.usernameInput{
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.passwordInput{
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}

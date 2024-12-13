@@ -1,0 +1,97 @@
+.page-container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  .text-div {
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Background color */
+    padding: 10px; /* Padding around the text */
+    margin: 10px 0; /* Margin around the div */
+    border: 1px solid #ddd; /* Border */
+    display:inline-block
+  }
+  
+  .report-div {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px  auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 600px; /* Set a width for the div */
+    height: 500px;
+    right:0;
+    position: relative
+  }
+  
+  .report-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .item-div {
+    font: size 18px;
+    font-weight:bold;
+    text-align:center
+  }
+  
+  .item-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    border:2px solid;
+    padding:20x;
+    margin-top:20px
+  }
+  
+  .bottom-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #e0e0e0; /* Gray background */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 4px; /* Optional: rounded corners */
+  }
+
+  .registerButton{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+  
+  .report-container {
+    position: relative;
+  }

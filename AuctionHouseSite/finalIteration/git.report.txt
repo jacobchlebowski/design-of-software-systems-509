@@ -1,0 +1,1701 @@
+commit 043b02dde34fab7adfc691a38a8f805627eccd4e
+Merge: 802de06 d2a65ac
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Fri Dec 13 18:08:37 2024 +0000
+
+    Merge branch 'patch-auctionReport' into 'main'
+    
+    Update admin-page.tsx
+    
+    See merge request jachlebowski/rust-auction-house!68
+
+commit d2a65ac4a14d4fff1503d303b0a69b24122e0d1e
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Fri Dec 13 16:46:14 2024 +0000
+
+    Update admin-page.tsx
+    Added handling for forensic searches that don't return results
+
+commit 802de06c5dc470ff5693118e22e1ac5cce7e7f96
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Dec 11 19:25:28 2024 -0500
+
+    stuff
+
+commit f932a7827748fccda7df1ad4d92915c96b92f676
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Wed Dec 11 23:20:22 2024 +0000
+
+    Update README.md
+
+commit f1af5cc62c360ce5b50836ed410c66b10849283e
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Wed Dec 11 23:11:42 2024 +0000
+
+    Update README.md
+
+commit 8f4bb1ee9afebe848e27035ef8626b70b58c19e4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Dec 9 18:57:16 2024 -0500
+
+    seller fixes
+
+commit a88ff9a5a554070066c0e3452a600c233357d1e1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Dec 9 18:55:36 2024 -0500
+
+    page updates
+
+commit 95f24267605a3c4e537cf38b3eba953165797772
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Dec 9 18:28:04 2024 -0500
+
+    fixes
+
+commit 0e93652c1c742443cb0c0ca29fbdc53290cc4f96
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Dec 9 18:25:33 2024 -0500
+
+    fulfill item type fix
+
+commit d10d84ce95fe127922cffd36caa1d43e1fc05649
+Merge: e26d98f fcd1b2d
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Dec 9 23:21:47 2024 +0000
+
+    Merge branch 'feature-newFulfill' into 'main'
+    
+    Update seller-page.tsx
+    
+    See merge request jachlebowski/rust-auction-house!67
+
+commit fcd1b2db8377456e69dfb61b3c397d936ec7c14f
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Dec 9 23:11:34 2024 +0000
+
+    Update seller-page.tsx
+
+commit e26d98f91371f2eb9b5304fa036c1cfc076afd48
+Merge: 0a175bc 0a1e29c
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Dec 9 20:33:25 2024 +0000
+
+    Merge branch 'feature-forensicReportToggle' into 'main'
+    
+    Update admin-page.tsx added toggle for forensic report
+    
+    See merge request jachlebowski/rust-auction-house!66
+
+commit 0a1e29c9ffa4e35c600342d0eb8bb9dcd81a907c
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Dec 9 20:31:21 2024 +0000
+
+    Update admin-page.tsx added toggle for forensic report
+
+commit 0a175bc8186b30347e67a053d87e70d07a361669
+Merge: 60a5b8f c83b986
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Dec 9 16:48:38 2024 +0000
+
+    Merge branch 'feature-generateAuctionReports' into 'main'
+    
+    Update admin-page.tsx with generateAuctionReport and generateForensicReport
+    
+    See merge request jachlebowski/rust-auction-house!65
+
+commit c83b986ec4b50ee8d1b5006d6a27f04758be894a
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Dec 9 13:49:23 2024 +0000
+
+    Update admin-page.tsx with generateAuctionReport and generateForensicReport
+
+commit 60a5b8f56a8f4a86a129d93721b3236fce4636ea
+Merge: 212e25b 0722f07
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Sun Dec 8 19:38:52 2024 +0000
+
+    Merge branch 'searchitemupdate' into 'main'
+    
+    searchitemsCustomer update
+    
+    See merge request jachlebowski/rust-auction-house!63
+
+commit 0722f0787eb63b2561f8dececce3209c331ff972
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Sat Dec 7 22:41:54 2024 -0500
+
+    searchitemsCustomer update
+
+commit 212e25b929a5811efb0230184e8feec977ca406c
+Merge: bec0d2a 5a7fdf8
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Dec 2 20:18:11 2024 +0000
+
+    Merge branch 'jachlebowski/iteration2fixes' into 'main'
+    
+    Jachlebowski/iteration2fixes
+    
+    See merge request jachlebowski/rust-auction-house!62
+
+commit 5a7fdf8e7ed8bc3b1080dcea70f008735d821a4d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Dec 2 15:16:05 2024 -0500
+
+    backend fixes for iteration 2 fixes
+
+commit f95c90385f3e7ac532400f434dddb0f9d34d9026
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Dec 2 15:03:44 2024 -0500
+
+    both use cases lambda work
+
+commit bec0d2ae303eae1eca5c96aa2abd146c6f7fcf42
+Merge: 98445b4 fed3bf0
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 29 21:08:09 2024 +0000
+
+    Merge branch 'jachlebowski/reviewPurchasesBuyer' into 'main'
+    
+    reviewPurchasesBuyer done
+    
+    See merge request jachlebowski/rust-auction-house!61
+
+commit fed3bf0b908b002d07b3d018c32e9556efbdb22e
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 29 16:05:53 2024 -0500
+
+    reviewPurchasesBuyer done
+
+commit 98445b474ff4846fdc669a44186478c615ae11f8
+Merge: 236c33f 68d208a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 29 20:53:19 2024 +0000
+
+    Merge branch 'sortItemsCustomer' into 'main'
+    
+    Sort items customer
+    
+    See merge request jachlebowski/rust-auction-house!60
+
+commit 68d208a52c74854b216387643e36866c30c9dc29
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 29 15:51:59 2024 -0500
+
+    sortItemCustomer Done
+
+commit 0a75cd7e6e46ffa42832a2e576f895f88e7c594e
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 29 15:03:06 2024 -0500
+
+    updated readme
+
+commit 236c33f22f529a7c0491a73d235db3f60fe1f2f7
+Merge: 72135d6 ba0069c
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Nov 26 20:53:35 2024 +0000
+
+    Merge branch 'jachlebowski/failedItem' into 'main'
+    
+    failed item completed
+    
+    See merge request jachlebowski/rust-auction-house!59
+
+commit ba0069cfdeb105627437fc1b014e1a58c2aac33a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 26 15:18:29 2024 -0500
+
+    failed item completed
+
+commit 72135d668ca6d5f703dd6af9525b295635f1d5ac
+Author: jacobchlebowski <jachlebowski@wpi.edu>
+Date:   Mon Nov 25 18:57:26 2024 -0500
+
+    iteration2
+
+commit c8d3dd5610e995dbe776720f7d22d8cfbb2203ba
+Author: jacobchlebowski <jachlebowski@wpi.edu>
+Date:   Mon Nov 25 18:29:54 2024 -0500
+
+    readme
+
+commit d6e3084425f144d83b11c63efae73e5988f0a90a
+Merge: ef16923 6fd6cfa
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Fri Nov 22 20:29:41 2024 +0000
+
+    Merge branch 'zihumphrey/update-backend-functions' into 'main'
+    
+    updated backend
+    
+    See merge request jachlebowski/rust-auction-house!58
+
+commit 6fd6cfae62edd8fee846287ba5d724711d24e2dc
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Fri Nov 22 15:29:02 2024 -0500
+
+    updated backend
+
+commit ef16923b5eafbf84eafeb314b4a00a8422b56117
+Merge: 05fc29b 5a9e1fa
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 22 20:22:01 2024 +0000
+
+    Merge branch 'jachlebowski/errorFixes' into 'main'
+    
+    fixes
+    
+    See merge request jachlebowski/rust-auction-house!57
+
+commit 5a9e1faf741a4cae37878d07f164628932eb36d4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 22 15:20:59 2024 -0500
+
+    fixes
+
+commit 05fc29b20f97a72a0a3e7cf24237b2a0eabfd7d7
+Merge: 94de6b8 7a06cb5
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Thu Nov 21 21:32:57 2024 +0000
+
+    Merge branch 'jachlebowski/iteration2' into 'main'
+    
+    Jachlebowski/iteration2
+    
+    See merge request jachlebowski/rust-auction-house!56
+
+commit 7a06cb57c3935039605904666f5b32ec183c7e9d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Nov 21 16:21:53 2024 -0500
+
+    iteration 2 wip and backend updates
+
+commit 5abbb1e37e90ec961d5b566b85623739a3fb59f0
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Nov 21 15:35:09 2024 -0500
+
+    iteration 2 prepare wip
+
+commit 94de6b804ff9f8794abe023c81307be848b5333c
+Merge: bee0e7e d5dc760
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Thu Nov 21 00:00:17 2024 +0000
+
+    Merge branch 'jachlebowski/buyerWithin24Hours' into 'main'
+    
+    sorts for new updated date and time
+    
+    See merge request jachlebowski/rust-auction-house!55
+
+commit d5dc760959bc4acdb7417a4b0cc8ada81c204f99
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 20 18:59:31 2024 -0500
+
+    sorts for new updated date and time
+
+commit bee0e7e78843ca6feedf3481bef649627323fbb8
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 20 18:32:20 2024 -0500
+
+    buyer page
+
+commit b004206140191612e9dd26d9d34621902fab3dd6
+Merge: 5180bdd 4eb37b0
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Nov 20 21:57:51 2024 +0000
+
+    Merge branch 'zihumphrey/view-item-update' into 'main'
+    
+    fixed admin balance and set items inactive when viewed
+    
+    See merge request jachlebowski/rust-auction-house!54
+
+commit 5180bdd763550377eab39e3649aaf98ac2e3eb34
+Merge: 3bae119 3534805
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Wed Nov 20 21:56:02 2024 +0000
+
+    Merge branch 'jachlebowski/dateFixes' into 'main'
+    
+    Jachlebowski/date fixes
+    
+    See merge request jachlebowski/rust-auction-house!53
+
+commit 4eb37b04243fd30fe6c16fcd5bd0b6f913ed2d14
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Wed Nov 20 16:54:07 2024 -0500
+
+    fixed admin balance and set items inactive when viewed
+
+commit 353480597ed7ad4a3730ff8eecc41ff05964da17
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 20 16:53:58 2024 -0500
+
+    buyer page
+
+commit 5aa82389267ea7ad993e4ff72892326ee20e4ec1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 20 15:52:47 2024 -0500
+
+    dates fixed for seller
+
+commit 3bae119575feac2447afb449db25fae99f3be225
+Merge: d2adee5 fca24db
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Nov 19 23:02:01 2024 +0000
+
+    Merge branch 'jachlebowski/sortRecentlySoldBuyer' into 'main'
+    
+    sort recently sold buyer done
+    
+    See merge request jachlebowski/rust-auction-house!52
+
+commit fca24dbde2c06df091c7f48550d8403f405ae0d8
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 19 18:00:59 2024 -0500
+
+    sort recently sold buyer done
+
+commit d2adee5146f24a472ba2d721b9e5da1b09214fe2
+Merge: 91040a3 a991632
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Nov 19 22:18:58 2024 +0000
+
+    Merge branch 'jachlebowski/searchRecentlySoldBuyer' into 'main'
+    
+    search recently sold buyer done
+    
+    See merge request jachlebowski/rust-auction-house!51
+
+commit a9916327bfd24ae33df6bdeeac7ad7a340437594
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 19 17:17:43 2024 -0500
+
+    search recently sold buyer done
+
+commit 91040a358d8d759f70412ecea2a4a3e13be45d4f
+Merge: b12d630 393baf4
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Nov 19 21:21:19 2024 +0000
+
+    Merge branch 'zihumphrey/view-item-customer' into 'main'
+    
+    view item customer and freeze/unfreeze admin item grey out
+    
+    See merge request jachlebowski/rust-auction-house!50
+
+commit 393baf41d5d9db7dac140421b66c2221bc676f15
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Tue Nov 19 16:20:11 2024 -0500
+
+    view item customer and freeze/unfreeze admin item grey out
+
+commit b12d630849d07a810329572b08465b352baa4a63
+Merge: 703674b 681c3c2
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Nov 18 23:55:23 2024 +0000
+
+    Merge branch 'itemfreezeupdate' into 'main'
+    
+    freezeItem fix
+    
+    See merge request jachlebowski/rust-auction-house!49
+
+commit 681c3c25bd4b308a3b1f297c8a803eae0c0369cd
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Mon Nov 18 18:40:08 2024 -0500
+
+    freezeItem fix
+
+commit 703674bea80405ca239d068419080da5673193f2
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Nov 18 18:22:00 2024 -0500
+
+    buy now
+
+commit 4fcb8ef7df13d356f784a5093a5d006816148146
+Merge: 6c94e22 6c40ee7
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Nov 18 21:41:10 2024 +0000
+
+    Merge branch 'jachlebowski/fulfillItemSetup' into 'main'
+    
+    fulfill item setup
+    
+    See merge request jachlebowski/rust-auction-house!48
+
+commit 6c40ee7b15ee2a0a77a69bde7d5dd2d901450e0b
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Nov 18 16:39:16 2024 -0500
+
+    fulfill item setup
+
+commit 6c94e22895e4cb2db12eeb7d9e3f496216683124
+Merge: 161a428 a182e4e
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Nov 18 21:15:55 2024 +0000
+
+    Merge branch 'freezeAdminUpdate' into 'main'
+    
+    freezeAdmin button update
+    
+    See merge request jachlebowski/rust-auction-house!46
+
+commit a182e4eebc1b9d8e7f7e4d3603a852a303fe49a3
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Sun Nov 17 19:33:30 2024 -0500
+
+    freezeAdmin button update
+
+commit 161a428a70f7367384a77508c8c43960cb16ce7f
+Merge: 038a69b 66e080c
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Nov 18 00:25:13 2024 +0000
+
+    Merge branch 'jachlebowski/immediateBuy' into 'main'
+    
+    Jachlebowski/immediate buy
+    
+    See merge request jachlebowski/rust-auction-house!45
+
+commit 66e080cf5ad8d6881c49953b589ab476480eccf4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sun Nov 17 19:23:32 2024 -0500
+
+    immediate buy DONE
+
+commit 038a69ba9967af5907f11a84f0cce7d1b36c1fa0
+Merge: fa0c07a ad8ac0e
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Sun Nov 17 23:19:04 2024 +0000
+
+    Merge branch 'FreezeAdmin' into 'main'
+    
+    Admin Freeze use cases
+    
+    See merge request jachlebowski/rust-auction-house!44
+
+commit ad8ac0e019374174cd252ebf04028973b6d2a094
+Merge: 5934ef2 fa0c07a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Sun Nov 17 23:18:00 2024 +0000
+
+    Merge branch 'main' into 'FreezeAdmin'
+    
+    # Conflicts:
+    #   auction-house-site/src/pages/admin-page.tsx
+
+commit 77f3f6316e1f4ce32833162f683777f159809ff5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sun Nov 17 17:52:58 2024 -0500
+
+    back end immediate buy
+
+commit 5f36d48c6214f59c8e489d11905852dda9b7fc0f
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sun Nov 17 17:51:39 2024 -0500
+
+    immediate buy WIP
+
+commit 5934ef2495610d668944923ea0e0a13c0117f452
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Sun Nov 17 17:25:06 2024 -0500
+
+    Admin Freeze use cases
+
+commit 4bbaa36a4cec4377062fcf783561ced9dd4735e1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sun Nov 17 17:17:05 2024 -0500
+
+    buyNow seller page
+
+commit fa0c07a8593f74b7f3b648e7bea70abf9f868d6d
+Merge: df2d532 b196cb9
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 15 21:36:42 2024 +0000
+
+    Merge branch 'jachlebowski/reviewActiveBidsBuyer' into 'main'
+    
+    Jachlebowski/review active bids buyer
+    
+    See merge request jachlebowski/rust-auction-house!43
+
+commit b196cb9a79a52c972398cb184e93e3121d286acd
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 15 16:33:27 2024 -0500
+
+    reviewActiveBidsBuyer Done
+
+commit 88e56245eb49765f8d48487d18f3db5a3a63c847
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 15 16:02:18 2024 -0500
+
+    fixed start/end date for itmes
+
+commit f4950c52d75a39671017051835e4c593912d3e36
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 15 15:39:15 2024 -0500
+
+    highest bidder now displays
+
+commit df2d532da0ad76f58629baf33dfff603c0d3a885
+Merge: 36c6246 63bb428
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Thu Nov 14 02:26:53 2024 +0000
+
+    Merge branch 'jachlebowski/placeBidBuyer' into 'main'
+    
+    Jachlebowski/place bid buyer
+    
+    See merge request jachlebowski/rust-auction-house!42
+
+commit 63bb428f1e5a4174ec640024a8322ddafab04bf8
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 13 21:26:01 2024 -0500
+
+    done for now
+
+commit 5083e9d0144111beae46c63ec64add6df7fe1aa3
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 13 20:28:12 2024 -0500
+
+    cannot place bid since yours is already the highest
+
+commit c517ca9b13c0ab7bf2d9895df711b59ce922b5d1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 13 20:01:42 2024 -0500
+
+    errors display and bids history
+
+commit e8b03bbad85988d5da9990dc4e0ca8958219a5d5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 13 18:16:43 2024 -0500
+
+    wip
+
+commit 36c6246e132c17081d006053cc2a7baf89e4dec4
+Merge: e678496 4c674e0
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Nov 13 20:02:01 2024 +0000
+
+    Merge branch 'zihumphrey/adminPopulateItems' into 'main'
+    
+    admin populate items and seller balance update
+    
+    See merge request jachlebowski/rust-auction-house!41
+
+commit 4c674e0de02e1995277cb6876366ff5c16f31ba7
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Wed Nov 13 15:00:45 2024 -0500
+
+    admin populate items and seller balance update
+
+commit c5a6cc4b49cbe381b42a3e13371f2e282ddaec0b
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 13 14:47:05 2024 -0500
+
+    wip
+
+commit 64dadbc5547a084d9552cca93eadd8fa6a6178e0
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 13 14:06:53 2024 -0500
+
+    seller page fix
+
+commit f16d174eb224de41c16b194ff3dc04b291cbab2d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 13 14:00:02 2024 -0500
+
+    itemID update on seller page
+
+commit e678496d59c0be70b45e65351a9b1efdd608c9f0
+Merge: 2b36868 19adfa7
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Nov 13 18:42:54 2024 +0000
+
+    Merge branch 'regupdate' into 'main'
+    
+    Regupdate
+    
+    See merge request jachlebowski/rust-auction-house!40
+
+commit 19adfa76d83fe6a01bdebd950e0b9ab022622840
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Tue Nov 12 23:30:37 2024 -0500
+
+    Fixed error messages
+
+commit 3b8d4bf8f72927d6aa8c4ae912a8796d48ad87b8
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Tue Nov 12 23:21:50 2024 -0500
+
+    Fixed error messages
+
+commit 6a525b43555a234c293bd55a2980a71fbd3a76c6
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Tue Nov 12 22:55:01 2024 -0500
+
+    Fixed error messages
+
+commit 2b36868b644a4fabad502cea9bc844eed02d8931
+Merge: 0ae1c30 eec1ac9
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Wed Nov 13 03:29:54 2024 +0000
+
+    Merge branch 'Publish' into 'main'
+    
+    Publish edit
+    
+    See merge request jachlebowski/rust-auction-house!38
+
+commit eec1ac954a20e4112c0e81ed8ddb34c84bb69f28
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Tue Nov 12 19:16:01 2024 -0500
+
+    Publish edit
+
+commit 0ae1c300b2f7f5d1cd958fd4b02ac5521c77044c
+Merge: a4d0784 c03f533
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Nov 12 20:09:47 2024 +0000
+
+    Merge branch 'jachlebowski/fixes' into 'main'
+    
+    Jachlebowski/fixes
+    
+    See merge request jachlebowski/rust-auction-house!37
+
+commit a4d0784c2bafe506585da6b2bb7fd49c47e8a9f6
+Merge: fbb4d63 9071019
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Nov 12 20:08:53 2024 +0000
+
+    Merge branch 'zihumphrey/buyer-view-item' into 'main'
+    
+    buyer view item
+    
+    See merge request jachlebowski/rust-auction-house!36
+
+commit c03f5330efa9c91a02272317092872e443739c72
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 12 15:08:15 2024 -0500
+
+    fixed edit item error
+
+commit 90710198549d840942dc9a8b1c513b39aafedf4a
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Tue Nov 12 15:04:42 2024 -0500
+
+    buyer view item
+
+commit 991008d098fd1529bf5407c9b40110f5f0b4e34d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 12 14:55:56 2024 -0500
+
+    fixed
+
+commit d400294569e05c36faf86e69e266a5fa556aa4db
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 12 14:46:51 2024 -0500
+
+    admin login
+
+commit f2ab588805baf8332b316deb0dc28a4c0d13e15a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 12 14:34:01 2024 -0500
+
+    customer login
+
+commit 23f3677443e0e5a0642b991830628814884d366f
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 12 14:30:00 2024 -0500
+
+    login updates
+
+commit d7009ff8aa70f609bc2a143d6d721cdb8c2cac1c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Nov 12 14:25:10 2024 -0500
+
+    reg page fixes
+
+commit fbb4d63fa74141412c5f56351caa1a196d6dcd42
+Merge: 1dbc90f f66af50
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Nov 11 22:57:41 2024 +0000
+
+    Merge branch 'jachlebowski/editImageForEditItem' into 'main'
+    
+    fixed images on edit item
+    
+    See merge request jachlebowski/rust-auction-house!35
+
+commit f66af5073f155d61037a95084dce5a1d648f7142
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Nov 11 17:54:59 2024 -0500
+
+    fixed images on edit item
+
+commit 1dbc90f65fd7a59740618613422be84b2539d9e6
+Merge: 635f3fc a9eecae
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Nov 11 22:20:39 2024 +0000
+
+    Merge branch 'jachlebowski/imageDisplayFix' into 'main'
+    
+    fixed image display
+    
+    See merge request jachlebowski/rust-auction-house!34
+
+commit a9eecae8f5da475958d6de15a7e04107899b87e4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Nov 11 17:13:09 2024 -0500
+
+    fixed image display
+
+commit 635f3fca7a9b5693e773d7fec8bef0876862a1b5
+Merge: e74b58f e682bf4
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Nov 11 21:34:41 2024 +0000
+
+    Merge branch 'zihumphrey/addFunds' into 'main'
+    
+    addFunds and getBalance
+    
+    See merge request jachlebowski/rust-auction-house!33
+
+commit e682bf4c3c355e71d539699da841b9a87f5b0290
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Mon Nov 11 16:18:03 2024 -0500
+
+    addFunds and getBalance
+
+commit e74b58f21143547c0286d0064b578409075cc3c3
+Merge: 7f9f6f3 97fbaee
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Sat Nov 9 21:29:40 2024 +0000
+
+    Merge branch 'jachlebowski/request-unfreeze-item-seller' into 'main'
+    
+    Jachlebowski/request unfreeze item seller
+    
+    See merge request jachlebowski/rust-auction-house!32
+
+commit 97fbaee6e607f51f2cbf4a865a171ad3f4ff805c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sat Nov 9 16:04:50 2024 -0500
+
+    requestUnfreezeItemSeller complete
+
+commit 9889eada7df8c560b660dafb18049ce0ac6eb0fb
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sat Nov 9 15:56:48 2024 -0500
+
+    disabled fields when item is frozen
+
+commit 9f4d24b4c9fd76f9b893d0a8c774ecca625610c3
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sat Nov 9 15:40:47 2024 -0500
+
+    fixed remove item checking if item is active or not
+
+commit d479edba3d562209733f0aecac78099cb81c9906
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Sat Nov 9 14:51:54 2024 -0500
+
+    add and edit required fields
+
+commit 7f9f6f3392ae678789dd56c2912c03be13fbad7b
+Merge: 8b0b8a7 7f4ef00
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Sat Nov 9 18:31:26 2024 +0000
+
+    Merge branch 'Publish' into 'main'
+    
+    publish use case
+    
+    See merge request jachlebowski/rust-auction-house!31
+
+commit 7f4ef005df8b3ca334601c9aaa92fec4a2d8b939
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Fri Nov 8 19:49:01 2024 -0500
+
+    publish use case
+
+commit 8b0b8a765020ae3c0bc3c1adf64df83b5974172e
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 6 19:45:31 2024 -0500
+
+    readme
+
+commit 355f8aa7fa16420b9621892435f0b36bc1160f1e
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 6 19:43:23 2024 -0500
+
+    iteration1
+
+commit 11bd2000303bdab8826596ea5cb8607ac1a85d31
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 6 19:17:16 2024 -0500
+
+    added aws links
+
+commit 626debde7d9197c6b8a0fc8249dc6bfd81d87191
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Nov 6 18:54:43 2024 -0500
+
+    login page and buyer page username display
+
+commit e244ea0bd77ab30f96be07c36ba623adffa6e503
+Merge: a67583e 2903753
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Nov 6 23:03:03 2024 +0000
+
+    Merge branch 'patch-login' into 'main'
+    
+    Update login-page.tsx
+    
+    See merge request jachlebowski/rust-auction-house!30
+
+commit 290375375aac9bb2a07a0e46d02717dbecd43690
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Wed Nov 6 22:40:28 2024 +0000
+
+    Update login-page.tsx
+
+commit a67583e5e90cd4dd1d70c532927103e0fcdebdb9
+Merge: 68f1703 ccf3f0f
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Nov 5 02:08:43 2024 +0000
+
+    Merge branch 'createAccountEdits' into 'main'
+    
+    register done
+    
+    See merge request jachlebowski/rust-auction-house!29
+
+commit ccf3f0f836843eedbab8a2ad7ac6cb7426600ff4
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Mon Nov 4 21:07:49 2024 -0500
+
+    register done
+
+commit 68f1703c2b94cd8bee3d79142547320ccfabb90f
+Merge: 5683a52 8ad52af
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Nov 4 23:35:59 2024 +0000
+
+    Merge branch 'openAccountBuyer' into 'main'
+    
+    Create Buyer and Seller Account
+    
+    See merge request jachlebowski/rust-auction-house!27
+
+commit 8ad52af78f20030d00b87465e47a8395c45e7254
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Mon Nov 4 18:31:54 2024 -0500
+
+    Create Buyer and Seller Account
+
+commit 5683a5277d53aa6ad275fe645ca0c607828db88d
+Merge: abbb6fe e4a06f2
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Nov 4 22:57:58 2024 +0000
+
+    Merge branch 'giorgio-loginSeller' into 'main'
+    
+    Giorgio login seller and buyer
+    
+    See merge request jachlebowski/rust-auction-house!25
+
+commit e4a06f24bbff920427d595cde149e512c142f03e
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:34:18 2024 +0000
+
+    Upload New File
+
+commit cd636163dbde5a823a6a52482d5163f964eb971f
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:33:53 2024 +0000
+
+    Update package.json
+
+commit 539cff9a2b30ea7a41048f3b20184cd7c7b5895a
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:33:34 2024 +0000
+
+    Upload New File
+
+commit 6fe768dd4c21be23fd1458bb1df59a945d7193d8
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:33:10 2024 +0000
+
+    Update index.mjs
+
+commit 853d93811aef6b2d631529278a5b151f6e9d1291
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:31:42 2024 +0000
+
+    Upload New File
+
+commit c97f0f5e7a81156197bf1134b9f715d4dcbdbefb
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:14:34 2024 +0000
+
+    Update index.mjs
+
+commit 2889fafe220dd560a3c473cc77d1974b20d190b2
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:13:31 2024 +0000
+
+    Upload New File
+
+commit 01f269ff69c224b38273d2a50b6fcfa98ab72cf6
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:13:16 2024 +0000
+
+    Upload New File
+
+commit 3ad85bb4cb02a3bf83de100d5e7f013b2ccc6c11
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:12:58 2024 +0000
+
+    Upload New File
+
+commit 754d65a9d447219ffd092373a152aefa07364f49
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:10:35 2024 +0000
+
+    Add new directory
+
+commit bef087f27471b22737db690da087eea0b932a07b
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:10:15 2024 +0000
+
+    Add new directory
+
+commit cfbd2989ee397bf3739f26a9b9c4d777a5bcdbb3
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Nov 4 22:09:37 2024 +0000
+
+    Added loginSeller to login-page.tsx
+
+commit abbb6feabaf2f172a2e1f59286733fa936f572a5
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 15:29:08 2024 -0400
+
+    wrapping up first 6 use cases
+
+commit 6d6d9145297ddc16864c1e34ea6b376335967af7
+Merge: c804f99 236b407
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Fri Nov 1 19:21:40 2024 +0000
+
+    Merge branch 'zihumphrey/review-items3' into 'main'
+    
+    finishing up work for front-end reviewItems
+    
+    See merge request jachlebowski/rust-auction-house!24
+
+commit 236b407444057f3927c2106b6deaa04ca7aea341
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 15:13:38 2024 -0400
+
+    finishing up work for front-end reviewItems
+
+commit c804f99efbcdda029d32e6870c928495e7a30969
+Merge: 2b96878 a4da60a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 18:56:15 2024 +0000
+
+    Merge branch 'jachlebowski/edit-item-seller' into 'main'
+    
+    Jachlebowski/edit item seller
+    
+    See merge request jachlebowski/rust-auction-house!23
+
+commit a4da60a35a96d9e347800eebcc21a8da7887bd19
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 1 14:38:31 2024 -0400
+
+    backend edit item seller
+
+commit ca887aaf19691bebdb93df12b276971824eb1baa
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 1 14:01:56 2024 -0400
+
+    wip
+
+commit 27e57eb42d933d68648f9f041e5a62aef1773ef8
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Fri Nov 1 13:27:46 2024 -0400
+
+    cleanup for add item and remove item
+
+commit 2b9687804f88eb9b1b8cd7eeb2d6c1bcc18647ff
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:47:40 2024 -0400
+
+    quick fix
+
+commit 4ba7f540ffa76910d8765d00498da5f48ce389e5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:45:10 2024 -0400
+
+    quick front end fixes
+
+commit 7485b62bc0fe1d6fa6a2763d7a8da97b42038556
+Merge: 4615d4c ad2dfcd
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Fri Nov 1 00:29:40 2024 +0000
+
+    Merge branch 'jachlebowski/remove-inactive-item-seller' into 'main'
+    
+    Jachlebowski/remove inactive item seller
+    
+    See merge request jachlebowski/rust-auction-house!22
+
+commit ad2dfcde40bbbfe7c85fe4cac43f592836d44978
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:25:56 2024 -0400
+
+    call review items after add or remove inactive item seller
+
+commit 5972ce25e05ae33b01e54d9d9b18c52a93f636ea
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:13:40 2024 -0400
+
+    call review items after remove item?
+
+commit 974e0dbe9267334117f4b3845257ec5bec997661
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:11:14 2024 -0400
+
+    backend remove inactive item seller
+
+commit 99b7b94d596a29bdb75095578d9e69026cf0a9b9
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:06:00 2024 -0400
+
+    front end remove inactive item seller
+
+commit 41ddff7d201b5640e0fec93be5e2a270c304717a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 20:02:34 2024 -0400
+
+    had to go back and fix add item
+
+commit 4615d4c3a3ba906f8be76a81c700715647c84339
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 19:46:11 2024 -0400
+
+    small addition
+
+commit 3de48fc8a2ab7a4eafdf0790e34274d39c5f764e
+Merge: 72804a9 ff419ba
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 31 23:43:49 2024 +0000
+
+    Merge branch 'zihumphrey/review-items2' into 'main'
+    
+    review item progress
+    
+    See merge request jachlebowski/rust-auction-house!21
+
+commit ff419ba30fad915dcdedc9cfe75090048f6bfe5c
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 19:41:47 2024 -0400
+
+    review item progress
+
+commit 72804a9e977957ca82f707565dbd34266bd7c045
+Merge: e06b463 a66f47b
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 31 22:08:48 2024 +0000
+
+    Merge branch 'zihumphrey/close-account2' into 'main'
+    
+    finished frontend for close account functions
+    
+    See merge request jachlebowski/rust-auction-house!20
+
+commit a66f47be35cb170d82d82ce7d102d37e79f14575
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 18:07:56 2024 -0400
+
+    finished frontend for close account functions
+
+commit e06b46349c09b49b029f66400cd956c41d0d586d
+Merge: def81d2 c4dd5ee
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 31 18:14:18 2024 +0000
+
+    Merge branch 'zihumphrey/reviewItems' into 'main'
+    
+    backend reviewItems seller
+    
+    See merge request jachlebowski/rust-auction-house!19
+
+commit c4dd5ee53aa6c6d5e9c13963fee14038f4f2edc6
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 14:08:58 2024 -0400
+
+    backend reviewItems seller
+
+commit def81d2933afe8a70cbb6a60ca1baf9fdbfeb390
+Merge: 6ef1ce2 2c75c4f
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Thu Oct 31 17:48:21 2024 +0000
+
+    Merge branch 'jachlebowski/add-item-seller1' into 'main'
+    
+    Jachlebowski/add item seller1
+    
+    See merge request jachlebowski/rust-auction-house!17
+
+commit 2c75c4f8315402786874a4e809db796d35f8be1a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:28:59 2024 -0400
+
+    backend seller add item
+
+commit d4facc129df9d9876f19525f4730dad82f45950e
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:28:50 2024 -0400
+
+    frontEnd seller add item
+
+commit 387e9646f4b36ad9c41265306952047f11b141f4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:00:28 2024 -0400
+
+    wip: add item seller back end
+
+commit c279a9f67732fbdff1ab1ce662459b23c83a8075
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 31 13:00:14 2024 -0400
+
+    front end seller add item
+
+commit 6ef1ce28126c5bbc18f26831ed745beeae711898
+Merge: e132ddb 136f0a7
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Oct 30 20:16:06 2024 +0000
+
+    Merge branch 'zihumphrey/backend-closeAccountSeller' into 'main'
+    
+    added close account buyer and seller
+    
+    See merge request jachlebowski/rust-auction-house!16
+
+commit 136f0a7c70b682c9cdd33e14cdde1103f25e9b91
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Wed Oct 30 16:14:13 2024 -0400
+
+    added close account buyer and seller
+
+commit e132ddb9c85468dbc4db88205fb8f82dda5a10e5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 16:07:47 2024 -0400
+
+    fix npm run build
+
+commit a0dd7e176536ea5a68a6e0c2512aed4ffddf609d
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Wed Oct 30 15:50:35 2024 -0400
+
+    please AWS s3 work now
+
+commit ad1acf41526b3fd825081001601285b43404f730
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:15:52 2024 -0400
+
+    close Seller and buyer merged with add items (wip)
+
+commit 9c1471e02c77f0c06a4c3e6ce40317e450aa5b1a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:12:56 2024 -0400
+
+    wip
+
+commit 368998e7118f996f5e2e6ef4bdb293fb48a99ef7
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:12:12 2024 -0400
+
+    wip
+
+commit cdc72e233416142319fe3ea4461e85c0d529c7d3
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 14:06:01 2024 -0400
+
+    baseURL
+
+commit f37a60dcb1bc46d6ccd74e4a76590fd0a4f3acd4
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 13:50:09 2024 -0400
+
+    .gitignore
+
+commit 7b213c63e5857758ed2db04b64641b8939c30c89
+Merge: 7c92344 88046d3
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Wed Oct 30 17:48:21 2024 +0000
+
+    Merge branch 'jachlebowski/add-item-seller' into 'main'
+    
+    Jachlebowski/add item seller
+    
+    See merge request jachlebowski/rust-auction-house!15
+
+commit 88046d35b8e0e73d1fa3538b3cf43997595a83e8
+Merge: e6465ba 7c92344
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Oct 30 17:47:45 2024 +0000
+
+    Merge branch 'main' into 'jachlebowski/add-item-seller'
+    
+    # Conflicts:
+    #   auction-house-site/src/pages/seller-page.tsx
+    #   package-lock.json
+    #   package.json
+
+commit e6465ba35aff4acb412ea1962bb6295aa3b8c142
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 30 12:57:41 2024 -0400
+
+    installed axios, mysql, mysql2 and seller page wip
+
+commit 19beec77527e4ae24c522d1752208edcc5cf0b3c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 15:29:42 2024 -0400
+
+    axios dependencies
+
+commit 7c92344da1cc5e33ae0b87a31f90d758b4442247
+Merge: 70f0a4c 73c8cd1
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 19:21:33 2024 +0000
+
+    Merge branch 'zihumphrey/review-items' into 'main'
+    
+    started front-end for review items lambda function and fixed /POST for close...
+    
+    See merge request jachlebowski/rust-auction-house!14
+
+commit 73c8cd144640d84edbd957367a41b24f82226f55
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 15:20:16 2024 -0400
+
+    started front-end for review items lambda function and fixed /POST for close accounts on buyer & seller
+
+commit 70f0a4c8a4d05ea0f7e62c0259675f12bc224814
+Merge: 4e5a5e4 c6a154a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 19:14:13 2024 +0000
+
+    Merge branch 'zihumphrey/close-account' into 'main'
+    
+    added frontend functionality for closing accounts
+    
+    See merge request jachlebowski/rust-auction-house!13
+
+commit c6a154a57931db2be69a3d4c7e3ce50947e79d8b
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Tue Oct 29 15:06:15 2024 -0400
+
+    added frontend functionality for closing accounts
+
+commit 6460ef19e83f7e2a5c5620a13b58416dbd719d50
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:37:42 2024 -0400
+
+    grabs all fields for add item
+
+commit 6b818da4f9f7ae7442aa34af75ac8916c1487a9c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:28:37 2024 -0400
+
+    wip seller add item
+
+commit d6c64440196aeeec8028366a4c6957d37758961f
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:10:38 2024 -0400
+
+    edit item form added item id field
+
+commit 72ffb7acb0a096f393e707be41388a1fa3a58bf1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 29 14:04:49 2024 -0400
+
+    login page default page
+
+commit 4e5a5e4eac783e37756838a4d624243f55d70eb9
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 28 18:28:11 2024 -0400
+
+    admin page css
+
+commit b2667569b857808238c16679ec1b1234f6aca17e
+Merge: dab6cde 49dc721
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 28 22:25:57 2024 +0000
+
+    Merge branch 'giorgio-pages' into 'main'
+    
+    Admin page
+    
+    See merge request jachlebowski/rust-auction-house!12
+
+commit 49dc72140e3fae7eec9e21dfcf759ff2a3f77e9e
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:45 2024 +0000
+
+    Upload New File
+
+commit e1ed732a68bbab2780ac809b6783479bab2fcad5
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:33 2024 +0000
+
+    Upload New File
+
+commit 04a98cb98b6e6a939a2e4acc6ef750a9644a2e2d
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:12 2024 +0000
+
+    Delete admin-page.tsx
+
+commit 16e6599ba7d440d7558d8f4ad4dc6a20cad8fbcc
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:07:05 2024 +0000
+
+    Delete admin-page.css
+
+commit fd651e98a6ac07dac9a066ed335437fdb905c192
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:06:29 2024 +0000
+
+    Upload New File
+
+commit 17c9ef3e2a0f72e6d5f68b43f28bbb771bdf759b
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:05:44 2024 +0000
+
+    Update admin-page.tsx
+
+commit 1041b7004e250412f2a9fa37928969c518544d71
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Mon Oct 28 21:05:05 2024 +0000
+
+    Upload New File
+
+commit dab6cdeb3fd7acd4b037a646fc380612f80281cf
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 24 14:45:41 2024 -0400
+
+    changed main page to register page
+
+commit 4b6eb18305382b05ff504db76405aa3e08acf58a
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Thu Oct 24 14:45:06 2024 -0400
+
+    removed front end folder
+
+commit 59e5d8e1c745b4c6875a1e01099efa7828d1d6f7
+Merge: de04cfb 8fe58bc
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Thu Oct 24 18:43:16 2024 +0000
+
+    Merge branch 'giorgio-pages' into 'main'
+    
+    Giorgio reg page
+    
+    See merge request jachlebowski/rust-auction-house!11
+
+commit 8fe58bccdc21b314cf41f8c3efbfe29bd5aabfa6
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:38:32 2024 +0000
+
+    Upload New File
+
+commit 9c57195604393b74829adf0cb967805529117831
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:38:02 2024 +0000
+
+    Upload New File
+
+commit 7a76563e3130c9bacf69d78a297cdfa3469d6088
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:37:11 2024 +0000
+
+    Delete reg-page.css
+
+commit cb6dca07dda73e24f98ec0f3f0d5c3bf112a1a5c
+Author: Giorgio, Matthew Stephen (901014507) <msgiorgio@wpi.edu>
+Date:   Thu Oct 24 18:36:58 2024 +0000
+
+    Upload New File
+
+commit de04cfb2a742d1f438a68ae23c9e103d48edea65
+Merge: 665a147 9aea6c4
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Oct 21 22:47:16 2024 +0000
+
+    Merge branch 'jachlebowski/seller-page2' into 'main'
+    
+    Jachlebowski/seller page2
+    
+    See merge request jachlebowski/rust-auction-house!10
+
+commit 9aea6c4dda095a0556071cd93364c6800f263784
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 18:45:32 2024 -0400
+
+    seller page edited
+
+commit a3051f3d0b4f7ab46aaf6a95c6eabe04da892be5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 18:29:59 2024 -0400
+
+    itemID included in items for easier editing
+
+commit 942b5a7c1b66c5fa0a642a40d3ec57e102a1579b
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 18:26:54 2024 -0400
+
+    removed unncessary css functions
+
+commit 665a1473211bba1f02cd1218b7d77d2beab4d55d
+Merge: bf3d2b6 7de024b
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Mon Oct 21 18:32:29 2024 +0000
+
+    Merge branch 'jachlebowski/customer-page' into 'main'
+    
+    Jachlebowski/customer page
+    
+    See merge request jachlebowski/rust-auction-house!9
+
+commit 7de024b901616452bb7ee9943015f49d54053a8d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:30:45 2024 -0400
+
+    customer page complete
+
+commit 9c43e5074da52b0b7fd9d88949c34f85eb990a2c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:17:33 2024 -0400
+
+    wip customer search
+
+commit de30fd3714ba31625dacc70511492468914e014d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:06:33 2024 -0400
+
+    initial customer page
+
+commit b24ca3038ea5cc4423d73b1d34560a5c41e7c3e5
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 14:06:16 2024 -0400
+
+    fixed buyer page table
+
+commit 6b5f36a5cb548023e0bf778ad09fcb92c9ec6959
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:56:09 2024 -0400
+
+    login page default screen
+
+commit c4abe84a66a9c9848558e18e0e9dc3f9dcf05ef1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:55:33 2024 -0400
+
+    removed comments
+
+commit 94f7b88379086fa1cbc5af08d0ebc429a36ca1fb
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:55:19 2024 -0400
+
+    moved login page to pages folder
+
+commit bf3d2b63e529f7cf2c35f1d2c47c734702d5b26c
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Mon Oct 21 13:51:05 2024 -0400
+
+    tracking
+
+commit 2cdd1d9a86262ebe5c53d736358b1373c301d7aa
+Merge: b495ab2 bb6526e
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 21 01:14:58 2024 +0000
+
+    Merge branch 'login-page' into 'main'
+    
+    created loginpage
+    
+    See merge request jachlebowski/rust-auction-house!7
+
+commit bb6526ea79290e7e7f741f8c4f0459a9361ccce3
+Author: seveilleux <seveilleux@wpi.edu>
+Date:   Fri Oct 18 21:48:45 2024 -0400
+
+    created loginpage
+
+commit b495ab2715f08e49815d0705f0738b9460da6715
+Merge: d9797c4 1ee551f
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Sat Oct 19 18:43:42 2024 +0000
+
+    Merge branch 'zihumphrey/buyer-page2' into 'main'
+    
+    finished starter buyer page and css
+    
+    See merge request jachlebowski/rust-auction-house!6
+
+commit 1ee551fb42ea51a1d4a13b79c24d275059a8daaa
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Sat Oct 19 14:42:57 2024 -0400
+
+    finished starter buyer page and css
+
+commit d9797c42bb21b32b4aef509f6da320c8ec193d6e
+Merge: 2d4985d 440af6a
+Author: Humphrey, Zaq I (724852400) <zihumphrey@wpi.edu>
+Date:   Thu Oct 17 18:09:45 2024 +0000
+
+    Merge branch 'zihumphrey/buyer-page1' into 'main'
+    
+    started work on buyer page
+    
+    See merge request jachlebowski/rust-auction-house!5
+
+commit 440af6af927ede81ab7b63cf1befd29118b6be6f
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Thu Oct 17 14:07:04 2024 -0400
+
+    started work on buyer page
+
+commit 2d4985dfacd32c25b7928527acdea947b4f5473e
+Merge: 71573b6 03b96bb
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Wed Oct 16 23:12:37 2024 +0000
+
+    Merge branch 'jachlebowski/seller-page1' into 'main'
+    
+    Jachlebowski/seller page1
+    
+    See merge request jachlebowski/rust-auction-house!4
+
+commit 03b96bbda4ced539f126ff144828be62c34a4122
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 19:11:39 2024 -0400
+
+    added MIT license
+
+commit ce06d121b3cb6b2e52905362d548004779bf6458
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 19:11:31 2024 -0400
+
+    updated readme
+
+commit 3af34d6ed448a12e21c302709958d5f5af887d7d
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 18:52:16 2024 -0400
+
+    seller page front-end complete
+
+commit b62165584ea650d9df6dc4b5472d4057495252d1
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 18:07:48 2024 -0400
+
+    wip item card
+
+commit 418155f9b7af7703846942c461609f00fa6abc17
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Wed Oct 16 17:25:28 2024 -0400
+
+    seller username, add/edit item form, seller balance
+
+commit 71573b68af9cfc26329881a636b5bde1da6485e8
+Merge: 15583c9 1e5c2ef
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Oct 15 17:53:14 2024 +0000
+
+    Merge branch 'jachlebowski/forwardPortTest' into 'main'
+    
+    fixed localhost connection, default page seller-page for now
+    
+    See merge request jachlebowski/rust-auction-house!3
+
+commit 1e5c2efcbb16af7790b8f78f5155666c9c5e74bc
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 13:51:29 2024 -0400
+
+    fixed localhost connection, default page seller-page for now
+
+commit 15583c9f1fb370e6dee641aff0ebca9c96f13854
+Merge: a9a2f77 4f29ee1
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Tue Oct 15 17:13:21 2024 +0000
+
+    Merge branch 'jachlebowski/seller-page' into 'main'
+    
+    Jachlebowski/seller page
+    
+    See merge request jachlebowski/rust-auction-house!2
+
+commit 4f29ee1f717bb6a9062baadee5b6bcb7c6bf6d68
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 13:11:52 2024 -0400
+
+    wip seller page
+
+commit 02568c17248443c4e46d8b0056500385b8646e76
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 12:58:47 2024 -0400
+
+    wip: seller page
+
+commit 1a9c7044f78fd5cf429b2bf6f4c955de98c7a9e6
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 12:35:09 2024 -0400
+
+    added auction house site react project
+
+commit 5df14b82f74df62d8e6735ab9795e210bd7869ef
+Author: jachlebowski <jachlebowski@ccc-app-p-u32.(none)>
+Date:   Tue Oct 15 12:29:06 2024 -0400
+
+    ignore node_modules folder, can always be installed locally
+
+commit a9a2f775c18166c5319f4a82d6df10139896af94
+Merge: df28a6c bf010d9
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:58:36 2024 +0000
+
+    Merge branch 'zaq' into 'main'
+    
+    readme change
+    
+    See merge request jachlebowski/rust-auction-house!1
+
+commit bf010d9a7abb09d756236945db72f33c1e4bdd90
+Author: zihumphrey <zihumphrey@wpi.edu>
+Date:   Mon Oct 14 18:50:18 2024 -0400
+
+    readme change
+
+commit df28a6cc904c8526caffc8171fda1e81296f49dd
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:06:19 2024 +0000
+
+    frontend
+
+commit b1146745f10c5d35afeb01b0810a87400ca58207
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:05:46 2024 +0000
+
+    backend directory
+
+commit 015895834b3ffff9eee9ffd70058186896c0141f
+Author: Chlebowski, Jacob Andrew (381161002) <jachlebowski@wpi.edu>
+Date:   Mon Oct 14 22:02:15 2024 +0000
+
+    Initial commit

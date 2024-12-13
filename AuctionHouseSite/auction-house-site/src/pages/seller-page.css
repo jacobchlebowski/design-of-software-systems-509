@@ -1,0 +1,87 @@
+.sellerMain {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 35px;
+    width: 100%;
+}
+
+.sellerUsername {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: 25px;
+    color: #333;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.addItemForm, .editItemForm {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    padding: 16px;
+    border: 1px solid black;
+    height: 420px; /* Fixed height for column 1 */
+}
+
+.sellerBalance {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 25px;
+    background-color: #f3d5d5;
+    padding: 10px;
+    text-align: center;
+}
+
+.sellerItems {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    font-size: 25px;
+    text-align: center;
+}
+
+.itemTable {
+    grid-column: 3 / 4;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    /* Allow the table to expand naturally */
+}
+
+.itemName {
+    grid-column: 1 / 3;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.itemImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.itemPrice, .itemDescription {
+    width: 100%;
+    padding: 8px;
+}
+
+.itemPrice {
+    grid-column: 1 / 2;
+    font-weight: bold;
+}
+
+.itemDescription {
+    grid-column: 2 / 3;
+}
